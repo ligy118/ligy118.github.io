@@ -10,6 +10,8 @@ title: "SolidWorks安装"
 
 win7下载软碟通，win8以及win10使用资源管理器打开
 
+软碟通的使用在下面
+
 只打开第一个即可
 
 ![SolidWorks安装包挂载](\downloads\SolidWorks安装包挂载.png)
@@ -46,8 +48,22 @@ win7下载软碟通，win8以及win10使用资源管理器打开
 
 
 
-另附：软碟通的使用
+另附2：软碟通的使用
 
 [下载地址](http://sw.bos.baidu.com/sw-search-sp/software/25aa83cb6273c/uiso9_cn_9.7.0.3476.exe)
 
-[使用](https://zhidao.baidu.com/question/309456449.html)
+安装后在安装包右键
+
+如图所示
+
+![软碟通](/downloads/软碟通.png)
+
+另附2：安装时提示缺库
+
+
+
+![SolidWorks库文件1](/downloads/SolidWorks库文件1.png)
+
+![SolidWorks库文件](/downloads/SolidWorks库文件.png)
+
+运行这个蓝色的setup即可
