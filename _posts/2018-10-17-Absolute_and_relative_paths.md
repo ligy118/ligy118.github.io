@@ -1,5 +1,5 @@
 ---
-layout: "POST"
+layout: POST
 tiele: "绝对路径与相对路径"
 ---
 

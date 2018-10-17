@@ -1,5 +1,5 @@
 ---
-type: POST
+layout: POST
 title: "arduino记不住打出来一目了然的知识点"
 ---
 
