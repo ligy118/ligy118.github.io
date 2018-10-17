@@ -1,6 +1,6 @@
 ---
-layout: POST
-tiele: "绝对路径与相对路径"
+layout: post
+title: "绝对路径与相对路径"
 ---
 
 ##### 通俗来说
