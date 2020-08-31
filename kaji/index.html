@@ -2,6 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
  <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
   <title>咔叽</title>
   <style type="text/css">
   body{
@@ -23,7 +24,7 @@
      border:#e6e6e6 1px solid;
      background-color:#e2e2e2;
      width:60px;
-     height:24px;
+     height:34px;
      text-align:center;
      line-height:16px;
      cursor:pointer;
@@ -111,14 +112,26 @@
 <form name="shuju" id="sj" action="" method="get" />  
 
 
-
 <table cellspacing="0" cellpadding="0" border="4">
-  <col width="113">
-  <col width="64">
-  <col width="64">
-  <col width="64">
-  <col width="64">
-  <col width="64" span="3">
+  <tr>
+
+    <td width="64">爆炸因数</td>
+    <td width="64">燃烧层数</td>
+    <td width="64">武器型号</td>
+  </tr>
+  <tr>
+    <td><input type="text" size="5" name="bzys" value="1" /></td>
+    <td><input type="text" size="5" name="rscs" value="12" /></td>
+    <td><input type="text" size="5" name="wqxh" value="4" /></td>
+
+  </tr>
+</table>
+<br/>
+<p>
+有关武器型号，轻型武器填2.25,中型武器填3.0625，重型武器填4，别问为什么，这么填就完事了。
+</p>
+<table cellspacing="0" cellpadding="0" border="4">
+
   <tr>
     <td width="113"></td>
     <td width="64">合计</td>
@@ -131,7 +144,7 @@
   </tr>
   <tr>
     <td>额外攻击力</td>
-    <td><input type="text" size="5" name="a11" onClick="sum(1)" value="0"  /></td>
+    <td><input type="text" size="5" name="a11" onClick="sum(1)" value="1"  /></td>
     <td><input type="text" size="5" name="a12" value="" /></td>
     <td><input type="text" size="5" name="a13" value="" /></td>
     <td><input type="text" size="5" name="a14" value="" /></td>
@@ -141,7 +154,7 @@
   </tr>
   <tr>
     <td>武器攻击力</td>
-    <td><input type="text" size="5" name="a21" onClick="sum(2)" value="0"  /></td>
+    <td><input type="text" size="5" name="a21" onClick="sum(2)" value="1"  /></td>
     <td><input type="text" size="5" name="a22" value="" /></td>
     <td><input type="text" size="5" name="a23" value="" /></td>
     <td><input type="text" size="5" name="a24" value="" /></td>
@@ -151,7 +164,7 @@
   </tr>
 <tr>
     <td>武器攻击力%</td>
-    <td><input type="text" size="5" name="a31" onClick="sum(3)" value="0"  /></td>
+    <td><input type="text" size="5" name="a31" onClick="sum(3)" value="1"  /></td>
     <td><input type="text" size="5" name="a32" value="" /></td>
     <td><input type="text" size="5" name="a33" value="" /></td>
     <td><input type="text" size="5" name="a34" value="" /></td>
@@ -161,7 +174,7 @@
   </tr>
   <tr>
     <td>战术攻</td>
-    <td><input type="text" size="5" name="a41" onClick="sum(4)" value="0"  /></td>
+    <td><input type="text" size="5" name="a41" onClick="sum(4)" value="1"  /></td>
     <td><input type="text" size="5" name="a42" value="" /></td>
     <td><input type="text" size="5" name="a43" value="" /></td>
     <td><input type="text" size="5" name="a44" value="" /></td>
@@ -171,7 +184,7 @@
   </tr>
   <tr>
     <td>攻击力倍率</td>
-    <td><input type="text" size="5" name="a51" onClick="sum(5)" value="0"  /></td>
+    <td><input type="text" size="5" name="a51" onClick="sum(5)" value="1"  /></td>
     <td><input type="text" size="5" name="a52" value="" /></td>
     <td><input type="text" size="5" name="a53" value="" /></td>
     <td><input type="text" size="5" name="a54" value="" /></td>
@@ -181,7 +194,7 @@
   </tr>
   <tr>
     <td>持续伤害</td>
-    <td><input type="text" size="5" name="a61" onClick="sum(6)" value="0"  /></td>
+    <td><input type="text" size="5" name="a61" onClick="sum(6)" value="1"  /></td>
     <td><input type="text" size="5" name="a62" value="" /></td>
     <td><input type="text" size="5" name="a63" value="" /></td>
     <td><input type="text" size="5" name="a64" value="" /></td>
@@ -190,25 +203,123 @@
     <td><input type="text" size="5" name="a67" value="" /></td>
   </tr>
 </table>
-<input type="button" class="btn" value="计算合计" onClick="sum(0)"/>    
-<table width="500" border="1">
-  <tbody>
-    <tr>
-      <th scope="col">爆炸因数</th>
-      <th scope="col">层数</th>
-      <th scope="col"></th>
-      <th scope="col"></th>
-      <th scope="col"></th>
-    </tr>
-    <tr>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-    </tr>
-  </tbody>
+
+<input type="button" class="btn btn-primary" value="计算合计" onClick="sum(0)"/>    
+
+<table cellspacing="0" cellpadding="0" border="4">
+  <tr>
+
+    <td width="30">联合比对</td>
+    <td width="80">因素</td>
+    
+    <td width="64">变动前效果</td>
+    <td width="64">变动量</td>
+    <td width="64">变动后效果</td>
+    <td width="64">生效变化</td>
+    <td width="500">生效方式</td>
+
+  </tr>
+  <tr>
+    <td><input type="text" size="5" name="b11" value="1" /></td>
+    <td>额外攻击力</td>
+    <td><input type="text" size="5" name="b13" value="1" /></td>
+    <td><input type="text" size="5" name="b14" value="10" /></td>
+    <td><input type="text" size="5" name="b15" value="1" /></td>
+    <td><input type="text" size="5" name="b16" value="1" /></td>
+    <td>轻型：额外攻击+武器攻击力*(2.25+2.25*武器攻击力%+战术攻)<br/>
+      中型：额外攻击+武器攻击力*(3.0625+3.0625*武器攻击力%+战术攻)<br/>
+      重型：额外攻击+武器攻击力*(4+4*武器攻击力%+战术攻)<br/>
+    </td>
+  </tr>
+  <tr>
+    <td><input type="text" size="5" name="b21" value="1" /></td>
+    <td>武器攻击力</td>
+    <td><input type="text" size="5" name="b23" value="1" /></td>
+    <td><input type="text" size="5" name="b24" value="10" /></td>
+    <td><input type="text" size="5" name="b25" value="1" /></td>
+    <td><input type="text" size="5" name="b26" value="1" /></td>
+    <td>轻型：额外攻击+武器攻击力*(2.25+2.25*武器攻击力%+战术攻)<br/>
+      中型：额外攻击+武器攻击力*(3.0625+3.0625*武器攻击力%+战术攻)<br/>
+      重型：额外攻击+武器攻击力*(4+4*武器攻击力%+战术攻)<br/>
+    </td>
+  </tr>
+  <tr>
+    <td><input type="text" size="5" name="b31" value="1" /></td>
+    <td>额外攻击力%</td>
+    <td><input type="text" size="5" name="b33" value="1" /></td>
+    <td><input type="text" size="5" name="b34" value="0.1" /></td>
+    <td><input type="text" size="5" name="b35" value="1" /></td>
+    <td><input type="text" size="5" name="b36" value="1" /></td>
+    <td>轻型：额外攻击+武器攻击力*(2.25+2.25*武器攻击力%+战术攻)<br/>
+      中型：额外攻击+武器攻击力*(3.0625+3.0625*武器攻击力%+战术攻)<br/>
+      重型：额外攻击+武器攻击力*(4+4*武器攻击力%+战术攻)<br/>
+    </td>
+  </tr>
+  <tr>
+    <td><input type="text" size="5" name="b41" value="1" /></td>
+    <td>战术攻</td>
+    <td><input type="text" size="5" name="b43" value="1" /></td>
+    <td><input type="text" size="5" name="b44" value="0.1" /></td>
+    <td><input type="text" size="5" name="b45" value="1" /></td>
+    <td><input type="text" size="5" name="b46" value="1" /></td>
+    <td>轻型：额外攻击+武器攻击力*(2.25+2.25*武器攻击力%+战术攻)<br/>
+      中型：额外攻击+武器攻击力*(3.0625+3.0625*武器攻击力%+战术攻)<br/>
+      重型：额外攻击+武器攻击力*(4+4*武器攻击力%+战术攻)<br/>
+    </td>
+  </tr>
+  <tr>
+    <td><input type="text" size="5" name="b51" value="1" /></td>
+    <td>攻击力倍率</td>
+    <td><input type="text" size="5" name="b53" value="1" /></td>
+    <td><input type="text" size="5" name="b54" value="0.1" /></td>
+    <td><input type="text" size="5" name="b55" value="1" /></td>
+    <td><input type="text" size="5" name="b56" value="1" /></td>
+    <td>攻击力倍率
+    </td>
+  </tr>
+  <tr>
+    <td><input type="text" size="5" name="b61" value="1" /></td>
+    <td>持续伤害</td>
+    <td><input type="text" size="5" name="b63" value="1" /></td>
+    <td><input type="text" size="5" name="b64" value="0.1" /></td>
+    <td><input type="text" size="5" name="b65" value="1" /></td>
+    <td><input type="text" size="5" name="b66" value="1" /></td>
+    <td>1+持续伤害
+    </td>
+  </tr>
+  <tr>
+    <td><input type="text" size="5" name="71" value="1" /></td>
+    <td>燃烧层数</td>
+    <td><input type="text" size="5" name="b73" value="1" /></td>
+    <td><input type="text" size="5" name="b74" value="0.1" /></td>
+    <td><input type="text" size="5" name="b75" value="1" /></td>
+    <td><input type="text" size="5" name="b76" value="1" /></td>
+    <td>燃烧层数
+    </td>
+  </tr>
+  <tr>
+    <td><input type="text" size="5" name="b81" value="1" /></td>
+    <td>爆炸因数</td>
+    <td><input type="text" size="5" name="b83" value="1" /></td>
+    <td><input type="text" size="5" name="b84" value="0.1" /></td>
+    <td><input type="text" size="5" name="b85" value="1" /></td>
+    <td><input type="text" size="5" name="b86" value="1" /></td>
+    <td>爆炸因数
+    </td>
+  </tr>
+  <tr>
+    <td><input type="text" size="5" name="b81" value="1" /></td>
+    <td>联合比对</td>
+    <td><input type="text" size="5" name="b83" value="1" /></td>
+    <td><input type="text" size="5" name="b84" value="0.1" /></td>
+    <td><input type="text" size="5" name="b85" value="1" /></td>
+    <td><input type="text" size="5" name="b86" value="1" /></td>
+    <td>以上所有选中的项相乘
+    </td>
+  </tr>
 </table>
+
+<input type="button" class="btn btn-primary" value="一建比对" onClick="sum(0)"/> 
 
 
 </body>
