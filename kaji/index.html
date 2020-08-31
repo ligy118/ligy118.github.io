@@ -1,0 +1,279 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+  <title>咔叽</title>
+  <!-- <link rel="stylesheet" href="index.css"> -->
+  <script src="index.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+    crossorigin="anonymous" />
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: #e3f2fd;">
+    <a class="navbar-brand" href="#"><i class="fas fa-cat"></i> Kaji</a>
+
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="" data-target="#myModal" data-toggle="modal">About</a>
+      </li>
+    </ul>
+  </nav>
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-4">一些大标题</h1>
+      <p class="lead">简要说明</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <h1>大标题</h1>
+    <br>
+    <div class="form-row row justify-content-start">
+      <div class=" form-group col-2"><label>爆炸因数</label><input type="number" name="bzys" value="1" /></div>
+
+      <div class="form-group col-2"><label>燃烧层数</label><input type="number" name="rscs" value="12" /></div>
+
+      <div class="form-group col-2"><label>武器型号</label><input type="number" name="wqxh" value="4" /></div>
+
+    </div>
+
+    <p>
+      有关武器型号，轻型武器填2.25,中型武器填3.0625，重型武器填4，别问为什么，这么填就完事了。
+    </p>
+    <br>
+    <br>
+    <br>
+    <h1>大标题</h1>
+    <br>
+    <table class="table">
+      <tr class="row justify-content-around align-content-center font-weight-bold">
+        <td class="col-2 "></td>
+        <td class="col-1">合计</td>
+        <td class="col-1">封印</td>
+        <td class="col-1">自身</td>
+        <td class="col-1">武器</td>
+        <td class="col-1">宝石1</td>
+        <td class="col-1">宝石2</td>
+        <td class="col-1">宝石3</td>
+      </tr>
+
+      <tr class=" row justify-content-around align-content-center">
+        <td class="col-2 font-weight-bold">额外攻击力</td>
+        <td class="col-1">
+          <p id="a11">0</p>
+        </td>
+        <td class="col-1"><input type="number" onchange="sum(1)" id="a12" min="0" onClick="this.select();" /></td>
+        <td class="col-1"><input type="number" onchange="sum(1)" id="a13" min="0" onClick="this.select();" /></td>
+        <td class="col-1"><input type="number" onchange="sum(1)" id="a14" min="0" onClick="this.select();" /></td>
+        <td class="col-1"><input type="number" onchange="sum(1)" id="a15" min="0" onClick="this.select();" /></td>
+        <td class="col-1"><input type="number" onchange="sum(1)" id="a16" min="0" onClick="this.select();" /></td>
+        <td class="col-1"><input type="number" onchange="sum(1)" id="a17" min="0" onClick="this.select();" /></td>
+      </tr>
+      <tr class="row justify-content-around align-content-center">
+        <td class="col-2 font-weight-bold">武器攻击力</td>
+        <td class="col-1">
+          <p id="a21">0</p>
+
+        </td>
+        <td class="col-1"><input type="number" onchange="sum(2)" id="a22" min="0" onClick="this.select();" /></td>
+        <td class="col-1"><input type="number" onchange="sum(2)" id="a23" min="0" onClick="this.select();" /></td>
+        <td class="col-1"><input type="number" onchange="sum(2)" id="a24" min="0" onClick="this.select();" /></td>
+        <td class="col-1"><input type="number" onchange="sum(2)" id="a25" min="0" onClick="this.select();" /></td>
+        <td class="col-1"><input type="number" onchange="sum(2)" id="a26" min="0" onClick="this.select();" /></td>
+        <td class="col-1"><input type="number" onchange="sum(2)" id="a27" min="0" onClick="this.select();" /></td>
+      </tr>
+      <tr class="row justify-content-around align-content-center">
+        <td class="col-2 font-weight-bold">武器攻击力%</td>
+        <td class="col-1">
+          <p id="a31">0</p>
+        </td>
+        <td class="col-1"><input type="number" onchange="sum(3)" id="a32" min="0" onClick="this.select();" /></td>
+        <td class="col-1"><input type="number" onchange="sum(3)" id="a33" min="0" onClick="this.select();" /></td>
+        <td class="col-1"><input type="number" onchange="sum(3)" id="a34" min="0" onClick="this.select();" /></td>
+        <td class="col-1"><input type="number" onchange="sum(3)" id="a35" min="0" onClick="this.select();" /></td>
+        <td class="col-1"><input type="number" onchange="sum(3)" id="a36" min="0" onClick="this.select();" /></td>
+        <td class="col-1"><input type="number" onchange="sum(3)" id="a37" min="0" onClick="this.select();" /></td>
+      </tr>
+      <tr class="row justify-content-around align-content-center">
+        <td class="col-2 font-weight-bold">战术攻</td>
+        <td class="col-1">
+          <p id="a41">0</p>
+        </td>
+        <td class="col-1"><input type="number" onchange="sum(4)" id="a42" min="0" onClick="this.select();" /></td>
+        <td class="col-1"><input type="number" onchange="sum(4)" id="a43" min="0" onClick="this.select();" /></td>
+        <td class="col-1"><input type="number" onchange="sum(4)" id="a44" min="0" onClick="this.select();" /></td>
+        <td class="col-1"><input type="number" onchange="sum(4)" id="a45" min="0" onClick="this.select();" /></td>
+        <td class="col-1"><input type="number" onchange="sum(4)" id="a46" min="0" onClick="this.select();" /></td>
+        <td class="col-1"><input type="number" onchange="sum(4)" id="a47" min="0" onClick="this.select();" /></td>
+      </tr>
+      <tr class="row justify-content-around align-content-center">
+        <td class="col-2 font-weight-bold">攻击力倍率</td>
+        <td class="col-1">
+          <p id="a51">0</p>
+        </td>
+        <td class="col-1"><input type="number" onchange="sum(5)" id="a52" min="0" onClick="this.select();" /></td>
+        <td class="col-1"><input type="number" onchange="sum(5)" id="a53" min="0" onClick="this.select();" /></td>
+        <td class="col-1"><input type="number" onchange="sum(5)" id="a54" min="0" onClick="this.select();" /></td>
+        <td class="col-1"><input type="number" onchange="sum(5)" id="a55" min="0" onClick="this.select();" /></td>
+        <td class="col-1"><input type="number" onchange="sum(5)" id="a56" min="0" onClick="this.select();" /></td>
+        <td class="col-1"><input type="number" onchange="sum(5)" id="a57" min="0" onClick="this.select();" /></td>
+      </tr>
+      <tr class="row justify-content-around align-content-center">
+        <td class="col-2 font-weight-bold">持续伤害</td>
+        <td class="col-1">
+          <p id="a61">0</p>
+        </td>
+        <td class="col-1"><input type="number" onchange="sum(6)" id="a62" min="0" onClick="this.select();" /></td>
+        <td class="col-1"><input type="number" onchange="sum(6)" id="a63" min="0" onClick="this.select();" /></td>
+        <td class="col-1"><input type="number" onchange="sum(6)" id="a64" min="0" onClick="this.select();" /></td>
+        <td class="col-1"><input type="number" onchange="sum(6)" id="a65" min="0" onClick="this.select();" /></td>
+        <td class="col-1"><input type="number" onchange="sum(6)" id="a66" min="0" onClick="this.select();" /></td>
+        <td class="col-1"><input type="number" onchange="sum(6)" id="a67" min="0" onClick="this.select();" /></td>
+      </tr>
+
+
+      <!-- <tr class="row justify-content-around align-content-center">
+        <td class="col-12"><input type="button" class="btn btn-primary" value="计算合计" onClick="sum(0)" /></td>
+      </tr> -->
+
+    </table>
+
+    <br>
+    <br>
+    <br>
+
+  </div>
+
+  <div class="container">
+    <table class="table">
+      <h1>大标题</h1>
+      <br>
+      <tr class="row justify-content-around align-content-center">
+        <td class="col-1">联合比对</td>
+        <td class="col-2">因素</td>
+        <td class="col-1">变动前效果</td>
+        <td class="col-1">变动量</td>
+        <td class="col-1">变动后效果</td>
+        <td class="col-1">生效变化</td>
+        <td class="col-5">生效方式</td>
+      </tr>
+      <tr class="row  justify-content-around align-content-center">
+        <td class="col-1"><input type="number" name="b11" value="1" /></td>
+        <td class="col-2">额外攻击力</td>
+        <td class="col-1"><input type="number" name="b13" value="1" /></td>
+        <td class="col-1"><input type="number" name="b14" value="10" /></td>
+        <td class="col-1"><input type="number" name="b15" value="1" /></td>
+        <td class="col-1"><input type="number" name="b16" value="1" /></td>
+        <td class="col-5">
+          <p>轻型：额外攻击+武器攻击力*(2.25+2.25*武器攻击力%+战术攻)<br />
+            中型：额外攻击+武器攻击力*(3.0625+3.0625*武器攻击力%+战术攻)<br />
+            重型：额外攻击+武器攻击力*(4+4*武器攻击力%+战术攻)
+            <p />
+        </td>
+      </tr>
+      <tr class="row  justify-content-around align-content-center">
+        <td class="col-1"><input type="number" name="b21" value="1" /></td>
+        <td class="col-2">武器攻击力</td>
+        <td class="col-1"><input type="number" name="b23" value="1" /></td>
+        <td class="col-1"><input type="number" name="b24" value="10" /></td>
+        <td class="col-1"><input type="number" name="b25" value="1" /></td>
+        <td class="col-1"><input type="number" name="b26" value="1" /></td>
+        <td class="col-5">
+          <p>轻型：额外攻击+武器攻击力*(2.25+2.25*武器攻击力%+战术攻)<br />
+            中型：额外攻击+武器攻击力*(3.0625+3.0625*武器攻击力%+战术攻)<br />
+            重型：额外攻击+武器攻击力*(4+4*武器攻击力%+战术攻)
+            <p />
+        </td>
+      </tr>
+      <tr class="row  justify-content-around align-content-center">
+        <td class="col-1"><input type="number" name="b31" value="1" /></td>
+        <td class="col-2">额外攻击力%</td>
+        <td class="col-1"><input type="number" name="b33" value="1" /></td>
+        <td class="col-1"><input type="number" name="b34" value="0.1" /></td>
+        <td class="col-1"><input type="number" name="b35" value="1" /></td>
+        <td class="col-1"><input type="number" name="b36" value="1" /></td>
+        <td class="col-5">
+          <p>轻型：额外攻击+武器攻击力*(2.25+2.25*武器攻击力%+战术攻)<br />
+            中型：额外攻击+武器攻击力*(3.0625+3.0625*武器攻击力%+战术攻)<br />
+            重型：额外攻击+武器攻击力*(4+4*武器攻击力%+战术攻)
+            <p />
+        </td>
+      </tr>
+      <tr class="row  justify-content-around align-content-center">
+        <td class="col-1"><input type="number" name="b41" value="1" /></td>
+        <td class="col-2">战术攻</td>
+        <td class="col-1"><input type="number" name="b43" value="1" /></td>
+        <td class="col-1"><input type="number" name="b44" value="0.1" /></td>
+        <td class="col-1"><input type="number" name="b45" value="1" /></td>
+        <td class="col-1"><input type="number" name="b46" value="1" /></td>
+        <td class="col-5">
+          <p>轻型：额外攻击+武器攻击力*(2.25+2.25*武器攻击力%+战术攻)<br />
+            中型：额外攻击+武器攻击力*(3.0625+3.0625*武器攻击力%+战术攻)<br />
+            重型：额外攻击+武器攻击力*(4+4*武器攻击力%+战术攻)
+            <p />
+        </td>
+      </tr>
+      <tr class="row  justify-content-around align-content-center">
+        <td class="col-1"><input type="number" name="b51" value="1" /></td>
+        <td class="col-2">攻击力倍率</td>
+        <td class="col-1"><input type="number" name="b53" value="1" /></td>
+        <td class="col-1"><input type="number" name="b54" value="0.1" /></td>
+        <td class="col-1"><input type="number" name="b55" value="1" /></td>
+        <td class="col-1"><input type="number" name="b56" value="1" /></td>
+        <td class="col-5">攻击力倍率</td>
+      </tr>
+      <tr class="row  justify-content-around align-content-center">
+        <td class="col-1"><input type="number" name="b61" value="1" /></td>
+        <td class="col-2">持续伤害</td>
+        <td class="col-1"><input type="number" name="b63" value="1" /></td>
+        <td class="col-1"><input type="number" name="b64" value="0.1" /></td>
+        <td class="col-1"><input type="number" name="b65" value="1" /></td>
+        <td class="col-1"><input type="number" name="b66" value="1" /></td>
+        <td class="col-5">1+持续伤害</td>
+      </tr>
+      <tr class="row  justify-content-around align-content-center">
+        <td class="col-1"><input type="number" name="71" value="1" /></td>
+        <td class="col-2">燃烧层数</td>
+        <td class="col-1"><input type="number" name="b73" value="1" /></td>
+        <td class="col-1"><input type="number" name="b74" value="0.1" /></td>
+        <td class="col-1"><input type="number" name="b75" value="1" /></td>
+        <td class="col-1"><input type="number" name="b76" value="1" /></td>
+        <td class="col-5">燃烧层数</td>
+      </tr>
+      <tr class="row  justify-content-around align-content-center">
+        <td class="col-1"><input type="number" name="b81" value="1" /></td>
+        <td class="col-2">爆炸因数</td>
+        <td class="col-1"><input type="number" name="b83" value="1" /></td>
+        <td class="col-1"><input type="number" name="b84" value="0.1" /></td>
+        <td class="col-1"><input type="number" name="b85" value="1" /></td>
+        <td class="col-1"><input type="number" name="b86" value="1" /></td>
+        <td class="col-5">爆炸因数</td>
+      </tr>
+      <tr class="row  justify-content-around align-content-center">
+        <td class="col-1"><input type="number" name="b81" value="1" /></td>
+        <td class="col-2">联合比对</td>
+        <td class="col-1"><input type="number" name="b83" value="1" /></td>
+        <td class="col-1"><input type="number" name="b84" value="0.1" /></td>
+        <td class="col-1"><input type="number" name="b85" value="1" /></td>
+        <td class="col-1"><input type="number" name="b86" value="1" /></td>
+        <td class="col-5">以上所有选中的项相乘</td>
+      </tr>
+      <tr class="row  justify-content-around align-content-center">
+        <td class="col-12">
+          <input type="button" class="btn btn-primary" value="一建比对" onClick="sum(0)" />
+        </td>
+      </tr>
+    </table>
+
+
+  </div>
+
+
+</body>
+</html>
