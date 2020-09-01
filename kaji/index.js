@@ -53,9 +53,10 @@ function bidui(bd){
         b[i*10+2]=isNaN(Number(temp3.value)) ? 0: Number(temp3.value);
     }
     for(var i=1;i<9;i++){
-        temp1 = document.getElementById("b" + i + "1") 
+        temp1 = document.getElementById("b" + i + "1").checked ? 1:0
         temp4 = document.getElementById("b" + i + "4") 
-        b[i*10+1]=isNaN(Number(temp1.value)) ? 0: Number(temp1.value);
+        console.log(temp1);
+        b[i*10+1]=temp1//isNaN(Number(temp1.value)) ? 0: Number(temp1.value);
         b[i*10+4]=isNaN(Number(temp4.value)) ? 0: Number(temp4.value);
     } 
     
