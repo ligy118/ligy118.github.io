@@ -5,7 +5,7 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
-  <title>咔叽</title>
+  <title>咔叽燃烧爆炸伤害各影响因素影响力分析</title>
   <!-- <link rel="stylesheet" href="index.css"> -->
   <script src="index.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
@@ -26,11 +26,23 @@
   </nav>
   <div class="jumbotron jumbotron-fluid">
     <div class="container">
-      <h1 class="display-4">一些大标题</h1>
-      <p class="lead">简要说明</p>
+      <h1 class="display-4">燃烧爆炸伤害的各影响因素的影响力分析</h1>
+      <p class="lead">首先在上方的表格中填入对应的属性，没有的不填 <br />
+        点击“影响分析”按钮，下方的表格中会分析单项变动会对总伤害影响多少<br />
+        生效变化=（变动后效果-变动前效果）/变动前效果<br />
+        如：武器攻击力% 变动量为 0.1 ， 变动效果为 0.05 ，可以理解为每10%的武器攻击力%对总伤害提升5%，二比一的生效转化。<br />
+        <br />
+        如果考虑多个因素取舍，如野性之心只有一个主词条，要在武器攻击力%和持续伤害之间取舍<br />
+        那么可以勾选武器攻击力%和持续伤害的联合对比项，武器攻击力的变动量填 -0.3 ，持续伤害的变动量为 0.3 <br />
+        然后点击“联合对比”按钮<br />
+
+        另注意：因计算逻辑是门外汉学了两天js写的，搞不好会有bug，如果发现哪计算有问题可以来nga帖子反馈下哈。<br />
+        特别感谢：大猪蹄子送来的美化！<br />
+        https://github.com/chwdy/kaji<br />
+      </p>
     </div>
   </div>
-<!--
+  <!--
   <td class="col-1">
     <p id="tt">传入数值</p>
   </td>
@@ -54,44 +66,49 @@
   </td>
 -->
   <div class="container">
-    <h1>大标题</h1>
-    <br>
+    <h1>填入对应属性</h1>
+    <p>
+      爆炸因数(自然引爆1，杰克领队自然引爆2，杰克战术1.2，烟花棒引爆为烟花棒传奇特效值) <br />
+      武器型号（轻型武器填2.25,中型武器填3.0625，重型武器填4） <br /> 
+      额外攻击力：封印（战斗法则），自身（一般为20），武器（一般没有），宝石（黑生肖，禁锢，噬魂） <br />
+      武器攻击力：封印（一般没有），自身（一般没有），武器（武器攻击力+烙印），宝石（一般没有） <br />
+      武器攻击力% ：封印（英雄勋章封印），自身（一般没有），武器（词缀），宝石（词缀） <br />
+      战术攻：封印（攻击赐福封印，武器大师封印），自身（战术攻填这里好了，战术攻就是有个战术释放时右上角有把剑，剑的数值就是战术攻） <br />
+      攻击力倍率：封印（无尽勇气封印），自身（原始是1，有山姆领队，斧系羁绊等在1的基础上相加），武器（如双飞燕），宝石（禁锢） <br />
+      持续伤害：封印（一般没有），自身（炮系羁绊），武器（词缀），宝石（词缀和野性之心） <br />
+    </p>
     <div class="form-row row justify-content-start">
-      <div class="form-group col-2"><label>燃烧层数</label><input type="number" id="a71" value="1" /></div>
+      <div class="form-group col-2"><label>燃烧层数</label><input type="number" id="a71" value="12" /></div>
 
-      <div class="form-group col-2"><label>爆炸因数</label><input type="number" id="a81" value="12" /></div>
+      <div class="form-group col-2"><label>爆炸因数</label><input type="number" id="a81" value="1" /></div>
 
       <div class="form-group col-2"><label>武器型号</label><input type="number" id="wqxh" value="4" /></div>
 
     </div>
 
-    <p>
-      有关武器型号，轻型武器填2.25,中型武器填3.0625，重型武器填4，别问为什么，这么填就完事了。
-    </p>
+
     <br>
-    <br>
-    <br>
-    <h1>大标题</h1>
-    <br>
+ 
     <table class="table">
       <tr class="row justify-content-around align-content-center font-weight-bold">
-        <td class="col-2 "></td>
-        <td class="col-1">合计</td>
-        <td class="col-1">封印</td>
-        <td class="col-1">自身</td>
-        <td class="col-1">武器</td>
-        <td class="col-1">宝石1</td>
-        <td class="col-1">宝石2</td>
-        <td class="col-1">宝石3</td>
+        <td class="col-2 text-center"></td>
+        <td class="col-1 text-center">合计</td>
+        <td class="col-1 text-center">封印</td>
+        <td class="col-1 text-center">自身</td>
+        <td class="col-1 text-center">武器</td>
+        <td class="col-1 text-center">宝石1</td>
+        <td class="col-1 text-center">宝石2</td>
+        <td class="col-1 text-center">宝石3</td>
       </tr>
 
       <tr class=" row justify-content-around align-content-center">
         <td class="col-2 font-weight-bold">额外攻击力</td>
         <td class="col-1">
-          <p id="a11">20</p>
+          <p class="text-center" id="a11">20</p>
         </td>
-        <td class="col-1"><input type="number" onchange="sum(1)" id="a12" min="0" onClick="this.select();" value="20" /></td>
-        <td class="col-1"><input type="number" onchange="sum(1)" id="a13" min="0" onClick="this.select();" /></td>
+        <td class="col-1"><input type="number" onchange="sum(1)" id="a12" min="0" onClick="this.select();"  />
+        </td>
+        <td class="col-1"><input type="number" onchange="sum(1)" id="a13" min="0" onClick="this.select();" value="20" /></td>
         <td class="col-1"><input type="number" onchange="sum(1)" id="a14" min="0" onClick="this.select();" /></td>
         <td class="col-1"><input type="number" onchange="sum(1)" id="a15" min="0" onClick="this.select();" /></td>
         <td class="col-1"><input type="number" onchange="sum(1)" id="a16" min="0" onClick="this.select();" /></td>
@@ -100,7 +117,7 @@
       <tr class="row justify-content-around align-content-center">
         <td class="col-2 font-weight-bold">武器攻击力</td>
         <td class="col-1">
-          <p id="a21">0</p>
+          <p class="text-center" id="a21">0</p>
 
         </td>
         <td class="col-1"><input type="number" onchange="sum(2)" id="a22" min="0" onClick="this.select();" /></td>
@@ -113,7 +130,7 @@
       <tr class="row justify-content-around align-content-center">
         <td class="col-2 font-weight-bold">武器攻击力%</td>
         <td class="col-1">
-          <p id="a31">0</p>
+          <p class="text-center" id="a31">0</p>
         </td>
         <td class="col-1"><input type="number" onchange="sum(3)" id="a32" min="0" onClick="this.select();" /></td>
         <td class="col-1"><input type="number" onchange="sum(3)" id="a33" min="0" onClick="this.select();" /></td>
@@ -125,7 +142,7 @@
       <tr class="row justify-content-around align-content-center">
         <td class="col-2 font-weight-bold">战术攻</td>
         <td class="col-1">
-          <p id="a41">0</p>
+          <p class="text-center" id="a41">0</p>
         </td>
         <td class="col-1"><input type="number" onchange="sum(4)" id="a42" min="0" onClick="this.select();" /></td>
         <td class="col-1"><input type="number" onchange="sum(4)" id="a43" min="0" onClick="this.select();" /></td>
@@ -137,10 +154,11 @@
       <tr class="row justify-content-around align-content-center">
         <td class="col-2 font-weight-bold">攻击力倍率</td>
         <td class="col-1">
-          <p id="a51" >1</p>
+          <p class="text-center" id="a51">1</p>
         </td>
         <td class="col-1"><input type="number" onchange="sum(5)" id="a52" min="0" onClick="this.select();" /></td>
-        <td class="col-1"><input type="number" onchange="sum(5)" id="a53" min="1" onClick="this.select();" value="1" /></td>
+        <td class="col-1"><input type="number" onchange="sum(5)" id="a53" min="1" onClick="this.select();" value="1" />
+        </td>
         <td class="col-1"><input type="number" onchange="sum(5)" id="a54" min="0" onClick="this.select();" /></td>
         <td class="col-1"><input type="number" onchange="sum(5)" id="a55" min="0" onClick="this.select();" /></td>
         <td class="col-1"><input type="number" onchange="sum(5)" id="a56" min="0" onClick="this.select();" /></td>
@@ -149,7 +167,7 @@
       <tr class="row justify-content-around align-content-center">
         <td class="col-2 font-weight-bold">持续伤害</td>
         <td class="col-1">
-          <p id="a61">0</p>
+          <p class="text-center" id="a61">0</p>
         </td>
         <td class="col-1"><input type="number" onchange="sum(6)" id="a62" min="0" onClick="this.select();" /></td>
         <td class="col-1"><input type="number" onchange="sum(6)" id="a63" min="0" onClick="this.select();" /></td>
@@ -159,11 +177,15 @@
         <td class="col-1"><input type="number" onchange="sum(6)" id="a67" min="0" onClick="this.select();" /></td>
       </tr>
 
-<!--
+      <!--
        <tr class="row justify-content-around align-content-center">
         <td class="col-12"><input type="button" class="btn btn-primary" value="计算合计" onClick="jshj()" /></td>
       </tr> -->
-
+      <tr class="row  justify-content-around align-content-center">
+        <td class="col-12">
+          <input type="button" class="btn btn-primary" value="影响分析" onClick="bidui()" />
+        </td>
+      </tr>
     </table>
 
     <br>
@@ -172,123 +194,124 @@
 
   </div>
 
+
+
   <div class="container">
     <table class="table">
-      <h1>大标题</h1>
-      <br>
-      <tr class="row justify-content-around align-content-center">
-        <td class="col-1">联合比对</td>
-        <td class="col-2">因素</td>
-        <td class="col-1">变动前效果</td>
-        <td class="col-1">变动量</td>
-        <td class="col-1">变动后效果</td>
-        <td class="col-1">生效变化</td>
-        <td class="col-5">生效方式</td>
-      </tr>
-      <tr class="row  justify-content-around align-content-center">
-        <td class="col-1"><input type="number" id="b11" value="1" /></td>
-        <td class="col-2">额外攻击力</td>
-        <td class="col-1"><input type="number" id="b13" value="1" /></td>
-        <td class="col-1"><input type="number" id="b14" value="10" /></td>
-        <td class="col-1"><input type="number" id="b15" value="1" /></td>
-        <td class="col-1"><input type="number" id="b16" value="1" /></td>
-        <td class="col-5">
-          <p>轻型：额外攻击+武器攻击力*(2.25+2.25*武器攻击力%+战术攻)<br />
+
+
+      <h1>各影响因素的影响力</h1>
+      攻击力*(1+持续伤害)*燃烧层数*爆炸因数<br /> <br />
+      攻击力：不同型号武器的“额外攻击”“武器攻击力”“武器攻击力%”“战术攻”的生效方式 <br />
+      轻型：额外攻击+武器攻击力*(2.25+2.25*武器攻击力%+战术攻)<br />
             中型：额外攻击+武器攻击力*(3.0625+3.0625*武器攻击力%+战术攻)<br />
             重型：额外攻击+武器攻击力*(4+4*武器攻击力%+战术攻)
+
+      <tr class="row justify-content-around align-content-center font-weight-bold">
+        <td class="col-1  text-center">联合比对</td>
+        <td class="col-2  text-center">因素</td>
+        <td class="col-1  text-center">变动前效果</td>
+        <td class="col-1  text-center">变动量</td>
+        <td class="col-1  text-center">变动后效果</td>
+        <td class="col-1  text-center">生效变化</td>
+        <td class="col-5  text-center">生效方式</td>
+      </tr>
+      <tr class="row  justify-content-around align-content-center">
+        <td class="col-1 text-center"><input type="checkbox"  id="b11" value="1" onClick="this.select();" /></td>
+        <td class="col-2 text-center">额外攻击力</td>
+        <td class="col-1"><input type="number" id="b13"  onClick="this.select();" /></td>
+        <td class="col-1"><input type="number" id="b14" value="10" onClick="this.select();" /></td>
+        <td class="col-1"><input type="number" id="b15"  onClick="this.select();" /></td>
+        <td class="col-1"><input type="number" id="b16"  onClick="this.select();" /></td>
+        <td class="col-5">
+          <p>见攻击力
             <p />
         </td>
       </tr>
       <tr class="row  justify-content-around align-content-center">
-        <td class="col-1"><input type="number" id="b21" value="1" /></td>
-        <td class="col-2">武器攻击力</td>
-        <td class="col-1"><input type="number" id="b23" value="1" /></td>
-        <td class="col-1"><input type="number" id="b24" value="10" /></td>
-        <td class="col-1"><input type="number" id="b25" value="1" /></td>
-        <td class="col-1"><input type="number" id="b26" value="1" /></td>
+        <td class="col-1   text-center"><input type="checkbox"   id="b21" value="1" onClick="this.select();" /></td>
+        <td class="col-2   text-center ">武器攻击力</td>
+        <td class="col-1"><input type="number" id="b23"  onClick="this.select();" /></td>
+        <td class="col-1"><input type="number" id="b24" value="10" onClick="this.select();" /></td>
+        <td class="col-1"><input type="number" id="b25"  onClick="this.select();" /></td>
+        <td class="col-1"><input type="number" id="b26"  onClick="this.select();" /></td>
         <td class="col-5">
-          <p>轻型：额外攻击+武器攻击力*(2.25+2.25*武器攻击力%+战术攻)<br />
-            中型：额外攻击+武器攻击力*(3.0625+3.0625*武器攻击力%+战术攻)<br />
-            重型：额外攻击+武器攻击力*(4+4*武器攻击力%+战术攻)
+          <p>见攻击力
             <p />
         </td>
       </tr>
       <tr class="row  justify-content-around align-content-center">
-        <td class="col-1"><input type="number" id="b31" value="1" /></td>
-        <td class="col-2">额外攻击力%</td>
-        <td class="col-1"><input type="number" id="b33" value="1" /></td>
-        <td class="col-1"><input type="number" id="b34" value="0.1" /></td>
-        <td class="col-1"><input type="number" id="b35" value="1" /></td>
-        <td class="col-1"><input type="number" id="b36" value="1" /></td>
+        <td class="col-1  text-center"><input type="checkbox"   id="b31" value="1" onClick="this.select();" /></td>
+        <td class="col-2  text-center">额外攻击力%</td>
+        <td class="col-1"><input type="number" id="b33"  onClick="this.select();" /></td>
+        <td class="col-1"><input type="number" id="b34" value="0.1" onClick="this.select();" /></td>
+        <td class="col-1"><input type="number" id="b35"  onClick="this.select();" /></td>
+        <td class="col-1"><input type="number" id="b36"  onClick="this.select();" /></td>
         <td class="col-5">
-          <p>轻型：额外攻击+武器攻击力*(2.25+2.25*武器攻击力%+战术攻)<br />
-            中型：额外攻击+武器攻击力*(3.0625+3.0625*武器攻击力%+战术攻)<br />
-            重型：额外攻击+武器攻击力*(4+4*武器攻击力%+战术攻)
+          <p>见攻击力
             <p />
         </td>
       </tr>
       <tr class="row  justify-content-around align-content-center">
-        <td class="col-1"><input type="number" id="b41" value="1" /></td>
-        <td class="col-2">战术攻</td>
-        <td class="col-1"><input type="number" id="b43" value="1" /></td>
-        <td class="col-1"><input type="number" id="b44" value="0.1" /></td>
-        <td class="col-1"><input type="number" id="b45" value="1" /></td>
-        <td class="col-1"><input type="number" id="b46" value="1" /></td>
+        <td class="col-1  text-center"><input type="checkbox"   id="b41" value="1" onClick="this.select();" /></td>
+        <td class="col-2  text-center">战术攻</td>
+        <td class="col-1"><input type="number" id="b43"  onClick="this.select();" /></td>
+        <td class="col-1"><input type="number" id="b44" value="0.1" onClick="this.select();" /></td>
+        <td class="col-1"><input type="number" id="b45"  onClick="this.select();" /></td>
+        <td class="col-1"><input type="number" id="b46"  onClick="this.select();" /></td>
         <td class="col-5">
-          <p>轻型：额外攻击+武器攻击力*(2.25+2.25*武器攻击力%+战术攻)<br />
-            中型：额外攻击+武器攻击力*(3.0625+3.0625*武器攻击力%+战术攻)<br />
-            重型：额外攻击+武器攻击力*(4+4*武器攻击力%+战术攻)
+          <p>见攻击力
             <p />
         </td>
       </tr>
       <tr class="row  justify-content-around align-content-center">
-        <td class="col-1"><input type="number" id="b51" value="1" /></td>
-        <td class="col-2">攻击力倍率</td>
-        <td class="col-1"><input type="number" id="b53" value="1" /></td>
-        <td class="col-1"><input type="number" id="b54" value="0.1" /></td>
-        <td class="col-1"><input type="number" id="b55" value="1" /></td>
-        <td class="col-1"><input type="number" id="b56" value="1" /></td>
+        <td class="col-1  text-center"><input type="checkbox"   id="b51" value="1" onClick="this.select();" /></td>
+        <td class="col-2  text-center">攻击力倍率</td>
+        <td class="col-1"><input type="number" id="b53"  onClick="this.select();" /></td>
+        <td class="col-1"><input type="number" id="b54" value="0.1" onClick="this.select();" /></td>
+        <td class="col-1"><input type="number" id="b55"  onClick="this.select();" /></td>
+        <td class="col-1"><input type="number" id="b56"  onClick="this.select();" /></td>
         <td class="col-5">攻击力倍率</td>
       </tr>
       <tr class="row  justify-content-around align-content-center">
-        <td class="col-1"><input type="number" id="b61" value="1" /></td>
-        <td class="col-2">持续伤害</td>
-        <td class="col-1"><input type="number" id="b63" value="1" /></td>
-        <td class="col-1"><input type="number" id="b64" value="0.1" /></td>
-        <td class="col-1"><input type="number" id="b65" value="1" /></td>
-        <td class="col-1"><input type="number" id="b66" value="1" /></td>
+        <td class="col-1  text-center"><input type="checkbox"   id="b61" value="1" onClick="this.select();" /></td>
+        <td class="col-2  text-center">持续伤害</td>
+        <td class="col-1"><input type="number" id="b63"  onClick="this.select();" /></td>
+        <td class="col-1"><input type="number" id="b64" value="0.1" onClick="this.select();" /></td>
+        <td class="col-1"><input type="number" id="b65"  onClick="this.select();" /></td>
+        <td class="col-1"><input type="number" id="b66"  onClick="this.select();" /></td>
         <td class="col-5">1+持续伤害</td>
       </tr>
       <tr class="row  justify-content-around align-content-center">
-        <td class="col-1"><input type="number" id="b71" value="1" /></td>
-        <td class="col-2">燃烧层数</td>
-        <td class="col-1"><input type="number" id="b73" value="1" /></td>
-        <td class="col-1"><input type="number" id="b74" value="0.1" /></td>
-        <td class="col-1"><input type="number" id="b75" value="1" /></td>
-        <td class="col-1"><input type="number" id="b76" value="1" /></td>
+        <td class="col-1  text-center"><input type="checkbox"   id="b71" value="1" onClick="this.select();" /></td>
+        <td class="col-2  text-center">燃烧层数</td>
+        <td class="col-1"><input type="number" id="b73"  onClick="this.select();" /></td>
+        <td class="col-1"><input type="number" id="b74" value="1" onClick="this.select();" /></td>
+        <td class="col-1"><input type="number" id="b75"  onClick="this.select();" /></td>
+        <td class="col-1"><input type="number" id="b76"  onClick="this.select();" /></td>
         <td class="col-5">燃烧层数</td>
       </tr>
       <tr class="row  justify-content-around align-content-center">
-        <td class="col-1"><input type="number" id="b81" value="1" /></td>
-        <td class="col-2">爆炸因数</td>
-        <td class="col-1"><input type="number" id="b83" value="1" /></td>
-        <td class="col-1"><input type="number" id="b84" value="0.1" /></td>
-        <td class="col-1"><input type="number" id="b85" value="1" /></td>
-        <td class="col-1"><input type="number" id="b86" value="1" /></td>
+        <td class="col-1  text-center"><input type="checkbox"   id="b81" value="1" onClick="this.select();" /></td>
+        <td class="col-2  text-center">爆炸因数</td>
+        <td class="col-1"><input type="number" id="b83"  onClick="this.select();" /></td>
+        <td class="col-1"><input type="number" id="b84" value="0.1" onClick="this.select();" /></td>
+        <td class="col-1"><input type="number" id="b85"  onClick="this.select();" /></td>
+        <td class="col-1"><input type="number" id="b86"  onClick="this.select();" /></td>
         <td class="col-5">爆炸因数</td>
       </tr>
       <tr class="row  justify-content-around align-content-center">
-        <td class="col-1"><input type="number" id="b91" value="1" /></td>
-        <td class="col-2">联合比对</td>
-        <td class="col-1"><input type="number" id="b93" value="1" /></td>
-        <td class="col-1"><input type="number" id="b94" value="0.1" /></td>
-        <td class="col-1"><input type="number" id="b95" value="1" /></td>
-        <td class="col-1"><input type="number" id="b96" value="1" /></td>
+        <td class="col-1  text-center"><input type="checkbox"    id="b91" value="0" onClick="this.select();" /></td>
+        <td class="col-2  text-center">联合比对</td>
+        <td class="col-1"><input type="number" id="b93"  onClick="this.select();" /></td>
+        <td class="col-1"><input type="number" id="b94" onClick="this.select();" /></td>
+        <td class="col-1"><input type="number" id="b95"  onClick="this.select();" /></td>
+        <td class="col-1"><input type="number" id="b96"  onClick="this.select();" /></td>
         <td class="col-5">以上所有选中的项相乘</td>
       </tr>
       <tr class="row  justify-content-around align-content-center">
         <td class="col-12">
-          <input type="button" class="btn btn-primary" value="一建比对" onClick="bidui()" />
+          <input type="button" class="btn btn-primary" value="联合比对" onClick="bidui()" />
         </td>
       </tr>
     </table>
