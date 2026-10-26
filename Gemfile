@@ -9,10 +9,10 @@ ruby RUBY_VERSION
 #
 # This will help ensure the proper Jekyll version is running.
 # Happy Jekylling!
-gem "jekyll", "3.3.1"
+# gem "jekyll", "3.3.1"   # 已注释:改为使用 github-pages 锁定的 Jekyll 版本(与 GitHub Pages 构建一致)
 
-# This is the default theme for new Jekyll sites. You may change this to anything you like.
-gem "jekyll-theme-cayman-blog", "~> 0.0.5"
+# 主题模板已内置在仓库(_layouts/_sass),无需额外主题 gem
+# gem "jekyll-theme-cayman-blog", "~> 0.0.5"
 
 # If you want to use GitHub Pages, remove the "gem "jekyll"" above and
 # uncomment the line below. To upgrade, run `bundle update github-pages`.
