@@ -99,7 +99,12 @@
       text-overflow: clip;
       line-height: 1.7rem;
       padding: 0.3rem 0;
+      padding-left: 5rem;
       position: relative;
+    }
+    /* 日期拉回最左（竖线左侧），标题块整体右移（换行各行与首行对齐） */
+    #archives ul li .date {
+      margin-left: -5rem;
     }
     #archives ul li::before {
       position: absolute;
@@ -109,13 +114,12 @@
       height: auto;
       left: 77px;
     }
-    /* 标题整体右移，避开左侧竖线（第二行换行也在竖线右侧） */
     #archives ul li a {
-      margin-left: 5rem;
+      margin-left: 0;
     }
+    /* 移动端隐藏时间轴圆点：避免遮挡日期，且换行后各行与首行对齐 */
     #archives a::before {
-      top: 0.35rem;
-      left: 0;
+      display: none;
     }
   }
   /* 代码块：浅色背景 + 凸出（边框/圆角/轻阴影） */
