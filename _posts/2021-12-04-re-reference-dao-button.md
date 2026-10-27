@@ -60,7 +60,7 @@ End Sub
 ![](/downloads/re-reference-dao-button-代码2.png)
 ```
 
-```vba
+```bat
 @echo off
 timeout /t 2 /nobreak > nul
 set repairpath=%~dp0

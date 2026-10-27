@@ -39,7 +39,7 @@ vba通过读取output.txt日志获取保存结果。
 
 JieTu.bat代码如下:
 
-```vba
+```bat
 @echo off
 setlocal
 set A=%1
