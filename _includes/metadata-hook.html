@@ -109,8 +109,13 @@
       height: auto;
       left: 77px;
     }
+    /* 标题整体右移，避开左侧竖线（第二行换行也在竖线右侧） */
+    #archives ul li a {
+      margin-left: 5rem;
+    }
     #archives a::before {
       top: 0.35rem;
+      left: 0;
     }
   }
   /* 代码块：浅色背景 + 凸出（边框/圆角/轻阴影） */
