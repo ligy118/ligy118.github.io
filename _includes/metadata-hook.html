@@ -44,9 +44,47 @@
     }
   }
 
-  /* 侧边栏：Cayman 深蓝→绿渐变页头 */
+  /* 侧边栏：Cayman 深蓝→绿渐变页头（深色模式压暗） */
   #sidebar {
     background: linear-gradient(180deg, #155799 0%, #159957 100%);
+  }
+  :root[data-bs-theme=dark] #sidebar {
+    background: linear-gradient(180deg, #0b2f54 0%, #0d4a3f 100%);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-bs-theme]) #sidebar {
+      background: linear-gradient(180deg, #0b2f54 0%, #0d4a3f 100%);
+    }
+  }
+
+  /* 深色分支侧边栏文字/按钮变量（保证深色渐变上可读） */
+  :root[data-bs-theme=dark] {
+    --site-title-color: #ffffff;
+    --site-subtitle-color: #a9c8e8;
+    --sidebar-muted-color: #9db8d4;
+    --sidebar-active-color: #ffffff;
+    --sidebar-hover-bg: rgba(255, 255, 255, 0.10);
+    --sidebar-btn-bg: rgba(255, 255, 255, 0.10);
+    --sidebar-btn-color: #cfe0f0;
+    --avatar-border-color: rgba(255, 255, 255, 0.35);
+    --main-border-color: #2d2d2d;
+    --prompt-info-bg: #1c2430;
+    --prompt-info-icon-color: #6aa5d0;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-bs-theme]) {
+      --site-title-color: #ffffff;
+      --site-subtitle-color: #a9c8e8;
+      --sidebar-muted-color: #9db8d4;
+      --sidebar-active-color: #ffffff;
+      --sidebar-hover-bg: rgba(255, 255, 255, 0.10);
+      --sidebar-btn-bg: rgba(255, 255, 255, 0.10);
+      --sidebar-btn-color: #cfe0f0;
+      --avatar-border-color: rgba(255, 255, 255, 0.35);
+      --main-border-color: #2d2d2d;
+      --prompt-info-bg: #1c2430;
+      --prompt-info-icon-color: #6aa5d0;
+    }
   }
 </style>
 
