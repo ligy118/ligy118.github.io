@@ -40,8 +40,8 @@ End Sub
 
 **注：**此代码为ai完成。实测可用。
 
-[![点击图片查看大图](http://www.accessoft.com/article_attached/2023/image/202303/202303291157368623.png "点击查看大图")](http://www.accessoft.com/article_attached/2023/image/202303/202303291157368623.png)
+[![点击图片查看大图](/downloads/202303291157368623.png "点击查看大图")](/downloads/202303291157368623.png)
 
-[![点击图片查看大图](http://www.accessoft.com/article_attached/2023/image/202303/202303291318516063.png "点击查看大图")](http://www.accessoft.com/article_attached/2023/image/202303/202303291318516063.png)
+[![点击图片查看大图](/downloads/202303291318516063.png "点击查看大图")](/downloads/202303291318516063.png)
 
 来源：http://www.accessoft.com/blog/article-show.asp?userid=81743&Id=20694

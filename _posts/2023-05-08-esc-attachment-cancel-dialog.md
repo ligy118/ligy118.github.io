@@ -7,7 +7,7 @@ tags: [access]
 
 [**Access快速开发****平台**](http://www.accessgood.com)的**[通用附件管理模块](http://www.accessgood.com/help/attachment.html)**，如果打开不进行操作，按esc直接退出，有时会弹“用户取消操作”弹窗。如下图：
 
-[![点击图片查看大图](http://www.accessoft.com/article_attached/2023/image/202305/202305081623166295.png "点击查看大图")](http://www.accessoft.com/article_attached/2023/image/202305/202305081623166295.png)
+[![点击图片查看大图](/downloads/202305081623166295.png "点击查看大图")](/downloads/202305081623166295.png)
 
 **解决方法1：**
 
@@ -42,6 +42,6 @@ End Sub
 
 运行Set rst = CurrentDb.OpenRecordset(strSQL) 这句代码时出现了问题。
 
-[![点击图片查看大图](http://www.accessoft.com/article_attached/2023/image/202305/202305081625532787.png "点击查看大图")](http://www.accessoft.com/article_attached/2023/image/202305/202305081625532787.png)
+[![点击图片查看大图](/downloads/202305081625532787.png "点击查看大图")](/downloads/202305081625532787.png)
 
 来源：http://www.accessoft.com/blog/article-show.asp?userid=81743&Id=20732

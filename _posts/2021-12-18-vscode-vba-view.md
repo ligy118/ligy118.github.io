@@ -15,15 +15,15 @@ vba自家编辑器的高亮能凸显的信息很少，且无括号，引号，�
 
 vba高亮，代码段标识等，如下图：
 
-[![点击图片查看大图](http://www.accessoft.com/article_attached/2021/image/202112/202112181610372195.png "点击查看大图")](http://www.accessoft.com/article_attached/2021/image/202112/202112181610372195.png)
+[![点击图片查看大图](/downloads/202112181610372195.png "点击查看大图")](/downloads/202112181610372195.png)
 
 vba通过字符串拼接来整sql语句
 
-[![点击图片查看大图](http://www.accessoft.com/article_attached/2021/image/202112/202112181611024337.png "点击查看大图")](http://www.accessoft.com/article_attached/2021/image/202112/202112181611024337.png)
+[![点击图片查看大图](/downloads/202112181611024337.png "点击查看大图")](/downloads/202112181611024337.png)
 
 sql语句
 
-[![点击图片查看大图](http://www.accessoft.com/article_attached/2021/image/202112/202112181611150730.png "点击查看大图")](http://www.accessoft.com/article_attached/2021/image/202112/202112181611150730.png)
+[![点击图片查看大图](/downloads/202112181611150730.png "点击查看大图")](/downloads/202112181611150730.png)
 
 对于vs code的下载和插件安装网上有非常多教程，这里不在赘述。
 
@@ -31,7 +31,7 @@ sql语句
 
 让vs code 支持vba语言的插件
 
-![](http://www.accessoft.com/article_attached/2021/image/202112/202112181613462177.png)
+![](/downloads/202112181613462177.png)
 
 最后贴一个贴代码的网站：
 

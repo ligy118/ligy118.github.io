@@ -11,14 +11,14 @@ tags: [access]
 
 **示   例**:
 
-![](http://www.accessoft.com/images/download.gif)**[点击下载此附件](http://www.accessoft.com/article_attached/2021/file/202112/202112041354012973.zip)**
+![](/downloads/download.gif)**[点击下载此附件](http://www.accessoft.com/article_attached/2021/file/202112/202112041354012973.zip)**
 
 **图   示**:
 
-![](http://www.accessoft.com/article_attached/2021/image/202112/202112041358599484.png)
+![](/downloads/202112041358599484.png)
 
-[![点击图片查看大图](http://www.accessoft.com/article_attached/2021/image/202112/202112040941220958.jpg "点击查看大图")](http://www.accessoft.com/article_attached/2021/image/202112/202112040941220958.jpg)
+[![点击图片查看大图](/downloads/202112040941220958.jpg "点击查看大图")](/downloads/202112040941220958.jpg)
 
-[![点击图片查看大图](http://www.accessoft.com/article_attached/2021/image/202112/202112040941482549.jpg "点击查看大图")](http://www.accessoft.com/article_attached/2021/image/202112/202112040941482549.jpg)
+[![点击图片查看大图](/downloads/202112040941482549.jpg "点击查看大图")](/downloads/202112040941482549.jpg)
 
 来源：http://www.accessoft.com/blog/article-show.asp?userid=81743&Id=20115

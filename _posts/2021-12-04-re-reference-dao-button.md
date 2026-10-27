@@ -7,17 +7,17 @@ tags: [access]
 
 [**盟威Access快速开发****平台**](http://www.accessgood.com)的版本更新是直接替换main.mdb文件，偶尔在使用了盟威平台的版本更新或者把程序放在新电脑上后会出现dao引用失效的情况。起初根据 [通过函数自动引用DAO](http://www.accessoft.com/article-show.asp?id=17537)  ，在  SysFrmLogin的Form\_Load事件中重新引用dao。每次在关闭时会提示“是否保存对窗体的修改”，如下图：
 
-![](http://www.accessoft.com/article_attached/2021/image/202112/202112111452382367.PNG)
+![](/downloads/202112111452382367.PNG)
 
       虽然屏蔽系统警告可以解决，简单粗暴有效，但没了系统警告是很危险的，并且随着代码的复杂程度提高，很有可能在其他地方又解除了屏蔽警告。因此可以给用户创建个重新引用dao的按钮，在dao失效时手动一键重新引用dao，并可以配合vba达到同时重启的效果。
 
 **附   件**:
 
-![](http://www.accessoft.com/images/download.gif)[**点击下载此附件**](http://www.accessoft.com/article_attached/2021/file/202112/202112111454307669.zip)
+![](/downloads/download.gif)[**点击下载此附件**](http://www.accessoft.com/article_attached/2021/file/202112/202112111454307669.zip)
 
 **图   示**:
 
-![](http://www.accessoft.com/article_attached/2021/image/202112/202112130908292041.jpg)
+![](/downloads/202112130908292041.jpg)
 
 **代   码**:
 
@@ -39,7 +39,7 @@ End Function
 ```
 
 ```vba
-![](http://www.accessoft.com/article_attached/2021/image/202112/202112111459179693.png)
+![](/downloads/202112111459179693.png)
 ```
 
 ```vba
@@ -57,7 +57,7 @@ End Sub
 ```
 
 ```vba
-![](http://www.accessoft.com/article_attached/2021/image/202112/202112111459562069.png)
+![](/downloads/202112111459562069.png)
 ```
 
 ```vba

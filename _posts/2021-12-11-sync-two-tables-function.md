@@ -34,7 +34,7 @@ tags: [access]
 
 OnServer缺省时默认为FALSE，相从date取数需要GetParameter (ParameterName, , , , , TRUE]) 这样用，但在控件来源中连续参数缺省会报错，如下图：
 
-[![点击图片查看大图](http://www.accessoft.com/article_attached/2021/image/202112/202112111400350534.png "点击查看大图")](http://www.accessoft.com/article_attached/2021/image/202112/202112111400350534.png)
+[![点击图片查看大图](/downloads/202112111400350534.png "点击查看大图")](/downloads/202112111400350534.png)
 
       为了能在控件来源中使用GetParameter得到date中的数据，取了个巧，main中的SysLocalParameters 表我也创建了一样的记录，当需要从main中取数时，先同步到main中，在用GetParameter (ParameterName)。
 
@@ -42,7 +42,7 @@ OnServer缺省时默认为FALSE，相从date取数需要GetParameter (ParameterN
 
 **示   例**:
 
-![](http://www.accessoft.com/images/download.gif)[**点击下载此附件**](http://www.accessoft.com/article_attached/2021/file/202112/202112111347499819.zip)
+![](/downloads/download.gif)[**点击下载此附件**](http://www.accessoft.com/article_attached/2021/file/202112/202112111347499819.zip)
 
 同步一条记录:
 
@@ -65,7 +65,7 @@ ErrorHandler:
 End Function
 ```
 
-[![点击图片查看大图](http://www.accessoft.com/article_attached/2021/image/202112/202112111342247045.png "点击查看大图")](http://www.accessoft.com/article_attached/2021/image/202112/202112111342247045.png)
+[![点击图片查看大图](/downloads/202112111342247045.png "点击查看大图")](/downloads/202112111342247045.png)
 
 同步多条记录:
 
@@ -98,7 +98,7 @@ ErrorHandler:
 End Function
 ```
 
-[![点击图片查看大图](http://www.accessoft.com/article_attached/2021/image/202112/202112111342485345.png "点击查看大图")](http://www.accessoft.com/article_attached/2021/image/202112/202112111342485345.png)
+[![点击图片查看大图](/downloads/202112111342485345.png "点击查看大图")](/downloads/202112111342485345.png)
 
 同步单条记录用法：
 
@@ -116,8 +116,8 @@ call updateAllUMParameter()
 
 **使用举例**:
 
-[![点击图片查看大图](http://www.accessoft.com/article_attached/2021/image/202112/202112111348273977.png "点击查看大图")](http://www.accessoft.com/article_attached/2021/image/202112/202112111348273977.png)
+[![点击图片查看大图](/downloads/202112111348273977.png "点击查看大图")](/downloads/202112111348273977.png)
 
-[![点击图片查看大图](http://www.accessoft.com/article_attached/2021/image/202112/202112111348366080.png "点击查看大图")](http://www.accessoft.com/article_attached/2021/image/202112/202112111348366080.png)
+[![点击图片查看大图](/downloads/202112111348366080.png "点击查看大图")](/downloads/202112111348366080.png)
 
 来源：http://www.accessoft.com/blog/article-show.asp?userid=81743&Id=20127

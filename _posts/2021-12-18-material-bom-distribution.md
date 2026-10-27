@@ -9,12 +9,12 @@ tags: [access]
 
 **示   例**:
 
-![](http://www.accessoft.com/images/download.gif)[**点击下载此附件**](http://www.accessoft.com/article_attached/2021/file/202112/202112181540329787.zip)
+![](/downloads/download.gif)[**点击下载此附件**](http://www.accessoft.com/article_attached/2021/file/202112/202112181540329787.zip)
 
 **图   示**:
 
-[![点击图片查看大图](http://www.accessoft.com/article_attached/2021/image/202112/202112181539473375.png "点击查看大图")](http://www.accessoft.com/article_attached/2021/image/202112/202112181539473375.png)
+[![点击图片查看大图](/downloads/202112181539473375.png "点击查看大图")](/downloads/202112181539473375.png)
 
-[![点击图片查看大图](http://www.accessoft.com/article_attached/2021/image/202112/202112181540189612.png "点击查看大图")](http://www.accessoft.com/article_attached/2021/image/202112/202112181540189612.png)
+[![点击图片查看大图](/downloads/202112181540189612.png "点击查看大图")](/downloads/202112181540189612.png)
 
 来源：http://www.accessoft.com/blog/article-show.asp?userid=81743&Id=20134

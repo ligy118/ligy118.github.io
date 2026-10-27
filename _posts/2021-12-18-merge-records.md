@@ -11,17 +11,17 @@ tags: [access]
 
 **图   示**:
 
-![](http://www.accessoft.com/article_attached/2021/image/202112/202112181547003950.png)
+![](/downloads/202112181547003950.png)
 
-[![点击图片查看大图](http://www.accessoft.com/article_attached/2021/image/202112/202112181547114314.png "点击查看大图")](http://www.accessoft.com/article_attached/2021/image/202112/202112181547114314.png)
+[![点击图片查看大图](/downloads/202112181547114314.png "点击查看大图")](/downloads/202112181547114314.png)
 
 首先通过查询，对待合并表进行排序
 
-[![点击图片查看大图](http://www.accessoft.com/article_attached/2021/image/202112/202112181552263825.png "点击查看大图")](http://www.accessoft.com/article_attached/2021/image/202112/202112181552263825.png)
+[![点击图片查看大图](/downloads/202112181552263825.png "点击查看大图")](/downloads/202112181552263825.png)
 
 然后遍历查询，当[物料代码]有变化时在新建的结果表中新增一行，当[物料代码]无变化时编辑相应数据（合并记录）
 
-![](http://www.accessoft.com/article_attached/2021/image/202112/202112181555292219.png)
+![](/downloads/202112181555292219.png)
 
 **源   码**:
 
@@ -29,7 +29,7 @@ tags: [access]
 
 **代   码**:
 
-[![点击图片查看大图](http://www.accessoft.com/article_attached/2021/image/202112/202112181549442592.png "点击查看大图")](http://www.accessoft.com/article_attached/2021/image/202112/202112181549442592.png)
+[![点击图片查看大图](/downloads/202112181549442592.png "点击查看大图")](/downloads/202112181549442592.png)
 
 ```vba
 Private Sub Command7_Click()

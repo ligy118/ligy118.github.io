@@ -24,7 +24,7 @@ Function RecordExists1(sTbName1 As String, SFdName1 As String, sRecordValue1 As 
 End Function
 ```
 
-![](http://www.accessoft.com/article_attached/2021/image/202112/202112111004530747.png)
+![](/downloads/202112111004530747.png)
 
 两个条件的记录在表中是否存在，用下面自定义函数：
 
@@ -47,18 +47,18 @@ Function RecordExists2(sTbName1 As String, SFdName1 As String, SFdName2 As Strin
 End Function
 ```
 
-![](http://www.accessoft.com/article_attached/2021/image/202112/202112111005039123.png)
+![](/downloads/202112111005039123.png)
 
 **应用示例**:
 
-![](http://www.accessoft.com/images/download.gif)[**点击下载此附件**](http://www.accessoft.com/article_attached/2021/file/202112/202112110903471815.zip)
+![](/downloads/download.gif)[**点击下载此附件**](http://www.accessoft.com/article_attached/2021/file/202112/202112110903471815.zip)
 
 **图   示**:
 
-[![点击图片查看大图](http://www.accessoft.com/article_attached/2021/image/202112/202112110902166381.png "点击查看大图")](http://www.accessoft.com/article_attached/2021/image/202112/202112110902166381.png)
+[![点击图片查看大图](/downloads/202112110902166381.png "点击查看大图")](/downloads/202112110902166381.png)
 
-[![点击图片查看大图](http://www.accessoft.com/article_attached/2021/image/202112/202112110902265303.png "点击查看大图")](http://www.accessoft.com/article_attached/2021/image/202112/202112110902265303.png)
+[![点击图片查看大图](/downloads/202112110902265303.png "点击查看大图")](/downloads/202112110902265303.png)
 
-[![点击图片查看大图](http://www.accessoft.com/article_attached/2021/image/202112/202112110902349777.png "点击查看大图")](http://www.accessoft.com/article_attached/2021/image/202112/202112110902349777.png)
+[![点击图片查看大图](/downloads/202112110902349777.png "点击查看大图")](/downloads/202112110902349777.png)
 
 来源：http://www.accessoft.com/blog/article-show.asp?userid=81743&Id=20126
