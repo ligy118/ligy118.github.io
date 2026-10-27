@@ -38,9 +38,7 @@ Public Function ReAddDAO()
 End Function
 ```
 
-```vba
 ![](/downloads/re-reference-dao-button-代码1.png)
-```
 
 ```vba
 Private Sub btnRepair_Click()
@@ -56,9 +54,7 @@ Private Sub btnRepair_Click()
 End Sub
 ```
 
-```vba
 ![](/downloads/re-reference-dao-button-代码2.png)
-```
 
 ```bat
 @echo off
