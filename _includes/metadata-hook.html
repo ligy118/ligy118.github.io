@@ -53,16 +53,6 @@
 <!-- 代码高亮：浅色背景 + 凸出代码块（ligy118 自定义） -->
 <link rel="stylesheet" href="/assets/css/hljs-github.min.css">
 <style>
-  :root {
-    --highlight-bg-color: #f6f8fa;
-    --highlighter-rouge-color: #24292f;
-    --code-color: #24292f;
-    --code-header-text-color: #57606a;
-    --code-header-muted-color: #eaeef2;
-    --code-header-icon-color: #8c959f;
-    --language-border-color: #d0d7de;
-    --inline-code-bg: rgba(27, 31, 36, 0.06);
-  }
   /* 代码块：浅色背景 + 凸出（边框/圆角/轻阴影） */
   .highlight, .highlight .w, .hljs { color: #24292f; background-color: #f6f8fa; }
   .highlighter-rouge {
@@ -97,6 +87,33 @@
     background: none; border: 0; color: #57606a; cursor: pointer; font-size: 0.9rem; padding: 2px 4px;
   }
   .language-vba.highlighter-rouge > .code-header button:hover { color: #24292f; }
+  /* ==== 深色模式适配（代码块/复制按钮） ==== */
+  :root[data-bs-theme=dark] .highlight, :root[data-bs-theme=dark] .highlight .w, :root[data-bs-theme=dark] .hljs { color: #d0d0d0; background-color: #151515; }
+  :root[data-bs-theme=dark] .highlighter-rouge { border-color: #2d2d2d; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4); }
+  :root[data-bs-theme=dark] .hljs-keyword, :root[data-bs-theme=dark] .hljs-literal { color: #aa759f; font-weight: bold; }
+  :root[data-bs-theme=dark] .hljs-string, :root[data-bs-theme=dark] .hljs-attr { color: #90a959; }
+  :root[data-bs-theme=dark] .hljs-comment, :root[data-bs-theme=dark] .hljs-quote { color: #848484; font-style: italic; }
+  :root[data-bs-theme=dark] .hljs-number, :root[data-bs-theme=dark] .hljs-symbol { color: #90a959; }
+  :root[data-bs-theme=dark] .hljs-title, :root[data-bs-theme=dark] .hljs-title.function_, :root[data-bs-theme=dark] .hljs-function { color: #6a9fb5; }
+  :root[data-bs-theme=dark] .hljs-built_in, :root[data-bs-theme=dark] .hljs-type { color: #f4bf75; }
+  :root[data-bs-theme=dark] .hljs-name { color: #f4bf75; }
+  :root[data-bs-theme=dark] .language-vba.highlighter-rouge > .code-header { background: #2d2d2d; border-bottom-color: #2d2d2d; color: #b0b0b0; }
+  :root[data-bs-theme=dark] .language-vba.highlighter-rouge > .code-header button { color: #b0b0b0; }
+  :root[data-bs-theme=dark] .language-vba.highlighter-rouge > .code-header button:hover { color: #ffffff; }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-bs-theme]) .highlight, :root:not([data-bs-theme]) .highlight .w, :root:not([data-bs-theme]) .hljs { color: #d0d0d0; background-color: #151515; }
+    :root:not([data-bs-theme]) .highlighter-rouge { border-color: #2d2d2d; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4); }
+    :root:not([data-bs-theme]) .hljs-keyword, :root:not([data-bs-theme]) .hljs-literal { color: #aa759f; font-weight: bold; }
+    :root:not([data-bs-theme]) .hljs-string, :root:not([data-bs-theme]) .hljs-attr { color: #90a959; }
+    :root:not([data-bs-theme]) .hljs-comment, :root:not([data-bs-theme]) .hljs-quote { color: #848484; font-style: italic; }
+    :root:not([data-bs-theme]) .hljs-number, :root:not([data-bs-theme]) .hljs-symbol { color: #90a959; }
+    :root:not([data-bs-theme]) .hljs-title, :root:not([data-bs-theme]) .hljs-title.function_, :root:not([data-bs-theme]) .hljs-function { color: #6a9fb5; }
+    :root:not([data-bs-theme]) .hljs-built_in, :root:not([data-bs-theme]) .hljs-type { color: #f4bf75; }
+    :root:not([data-bs-theme]) .hljs-name { color: #f4bf75; }
+    :root:not([data-bs-theme]) .language-vba.highlighter-rouge > .code-header { background: #2d2d2d; border-bottom-color: #2d2d2d; color: #b0b0b0; }
+    :root:not([data-bs-theme]) .language-vba.highlighter-rouge > .code-header button { color: #b0b0b0; }
+    :root:not([data-bs-theme]) .language-vba.highlighter-rouge > .code-header button:hover { color: #ffffff; }
+  }
 </style>
 
 <!-- highlight.js VBA 精确高亮 + 复制按钮（ligy118 自定义，本地资源） -->
