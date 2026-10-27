@@ -91,6 +91,28 @@
 <!-- 代码高亮：浅色背景 + 凸出代码块（ligy118 自定义） -->
 <link rel="stylesheet" href="/assets/css/hljs-github.min.css">
 <style>
+  /* 归档页：移动端标题完整换行显示（桌面保持省略号截断） */
+  @media (max-width: 767.98px) {
+    #archives ul li {
+      white-space: normal;
+      overflow: visible;
+      text-overflow: clip;
+      line-height: 1.7rem;
+      padding: 0.3rem 0;
+      position: relative;
+    }
+    #archives ul li::before {
+      position: absolute;
+      float: none;
+      top: 0.4rem;
+      bottom: 0.4rem;
+      height: auto;
+      left: 77px;
+    }
+    #archives a::before {
+      top: 0.35rem;
+    }
+  }
   /* 代码块：浅色背景 + 凸出（边框/圆角/轻阴影） */
   .highlight, .highlight .w, .hljs { color: #24292f; background-color: #f6f8fa; }
   .highlighter-rouge {
