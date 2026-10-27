@@ -3,8 +3,6 @@ title: "导入excel表格注意事项分享"
 date: 2021-12-25 15:51:17 +0800
 categories: [计算机]
 tags: [access]
-redirect_from:
-  - /import-excel-notes.html
 ---
 
 导入excel表格的时候经常会丢失一些数据，导入之前建议先浏览access的官方文档，规避错误行为。

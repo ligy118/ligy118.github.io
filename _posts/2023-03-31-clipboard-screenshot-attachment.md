@@ -3,8 +3,6 @@ title: "Access快速开发平台--为平台附件模块增加从剪切板获取�
 date: 2023-03-31 14:23:41 +0800
 categories: [计算机]
 tags: [access]
-redirect_from:
-  - /clipboard-screenshot-attachment.html
 ---
 
 有个外协厂，坚持手写单据，数据时效性极差，且不好管理。

@@ -3,8 +3,6 @@ title: "创建让用户“重新引用dao”按钮"
 date: 2021-12-04 16:58:13 +0800
 categories: [计算机]
 tags: [access]
-redirect_from:
-  - /re-reference-dao-button.html
 ---
 
 [**盟威Access快速开发****平台**](http://www.accessgood.com)的版本更新是直接替换main.mdb文件，偶尔在使用了盟威平台的版本更新或者把程序放在新电脑上后会出现dao引用失效的情况。起初根据 [通过函数自动引用DAO](http://www.accessoft.com/article-show.asp?id=17537)  ，在  SysFrmLogin的Form\_Load事件中重新引用dao。每次在关闭时会提示“是否保存对窗体的修改”，如下图：

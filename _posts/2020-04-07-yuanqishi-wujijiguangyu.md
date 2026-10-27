@@ -3,8 +3,6 @@ title: "元气骑士 无尽激光鱼 精灵一技能轻松调出激光反射角�
 date: 2020-04-07 00:00:00 +0800
 categories: [游戏]
 tags: [元气骑士]
-redirect_from:
-  - /yuanqishi-wujijiguangyu.html
 ---
 
 > 视频攻略（B 站投稿视频，时长 00:14，播放约 1793）

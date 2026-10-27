@@ -3,8 +3,6 @@ title: "极致的速度，两百万被动科学家了解下"
 date: 2020-09-01 00:00:00 +0800
 categories: [游戏]
 tags: [咔叽探险队]
-redirect_from:
-  - /kaki-scientist-350-speedfarm.html
 ---
 
 （我的卡路里没有烙印，烙印攻击力还能再提升）

@@ -3,8 +3,6 @@ title: "按ESC退出附件窗体时去掉“用户取消操作”弹窗的解决
 date: 2023-05-08 15:45:21 +0800
 categories: [计算机]
 tags: [access]
-redirect_from:
-  - /esc-attachment-cancel-dialog.html
 ---
 
 [**Access快速开发****平台**](http://www.accessgood.com)的**[通用附件管理模块](http://www.accessgood.com/help/attachment.html)**，如果打开不进行操作，按esc直接退出，有时会弹“用户取消操作”弹窗。如下图：

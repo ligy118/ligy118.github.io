@@ -3,8 +3,6 @@ title: "有关“武器攻击力%”、“伤害增强”“攻击力倍率”�
 date: 2020-09-07 00:00:00 +0800
 categories: [游戏]
 tags: [咔叽探险队]
-redirect_from:
-  - /kaki-attack-affix-clarify.html
 ---
 
 约定：本帖仅讨论涉及的几个词缀以及他们在打伤害过程中的影响，且仅有这些影响。

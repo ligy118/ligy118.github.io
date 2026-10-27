@@ -3,8 +3,6 @@ title: "【Access自定义函数】“记录是否存在”的函数"
 date: 2021-12-11 09:04:32 +0800
 categories: [计算机]
 tags: [access]
-redirect_from:
-  - /record-exists-function.html
 ---
 
 需要频繁判断记录在表中是否存在，可以自定义一个“记录是否存在”函数，减少工作量。

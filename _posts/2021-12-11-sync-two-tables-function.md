@@ -3,8 +3,6 @@ title: "“同步两个表部分记录”函数"
 date: 2021-12-11 13:49:51 +0800
 categories: [计算机]
 tags: [access]
-redirect_from:
-  - /sync-two-tables-function.html
 ---
 
 在用[**盟威Access快速开发****平台**](http://www.accessgood.com)的GetParamete()函数时遇到了个问题

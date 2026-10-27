@@ -3,8 +3,6 @@ title: "【技巧分享】通过vscode查看高亮，缩进，匹配关系等"
 date: 2021-12-18 16:18:31 +0800
 categories: [计算机]
 tags: [access]
-redirect_from:
-  - /vscode-vba-view.html
 ---
 
 vba自家编辑器的高亮能凸显的信息很少，且无括号，引号，函数结束等匹配。分析逻辑和语法时非常不方便。

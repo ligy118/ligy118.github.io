@@ -3,8 +3,6 @@ title: "【Access思路分享】合并多条记录为一个记录"
 date: 2021-12-18 15:57:20 +0800
 categories: [计算机]
 tags: [access]
-redirect_from:
-  - /merge-records.html
 ---
 
 合并多条记录为一个记录示例见：

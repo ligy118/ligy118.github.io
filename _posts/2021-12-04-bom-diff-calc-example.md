@@ -3,8 +3,6 @@ title: "【Access高效办公】示例分享--清单差异计算源码示例"
 date: 2021-12-04 09:42:03 +0800
 categories: [计算机]
 tags: [access]
-redirect_from:
-  - /bom-diff-calc-example.html
 ---
 
 在**[Access软件网](http://www.accessoft.com)**网站淘宝学习各种源码示例也有快半年时间，最近做了一个工作上用的《清单差异计算》源码示例，分享给大家学习一下，希望对有需要的Access粉丝有帮助。

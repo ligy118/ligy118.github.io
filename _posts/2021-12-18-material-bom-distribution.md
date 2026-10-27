@@ -3,8 +3,6 @@ title: "【Access案例分享】分析物料在不同清单中的分布情况"
 date: 2021-12-18 15:40:40 +0800
 categories: [计算机]
 tags: [access]
-redirect_from:
-  - /material-bom-distribution.html
 ---
 
 通过导入多个清单，汇总分析所有涉及物料在所有清单中的分布情况。
