@@ -9,7 +9,7 @@ tags: [access]
 
 单条件记录在表中是否存在，用下面自定义函数：
 
-```vb
+```vba
 Function RecordExists1(sTbName1 As String, SFdName1 As String, sRecordValue1 As String) As Boolean
     'sTbName1 要查找的表名
     'SFdName1 要查找的字段名
@@ -28,7 +28,7 @@ End Function
 
 两个条件的记录在表中是否存在，用下面自定义函数：
 
-```vb
+```vba
 Function RecordExists2(sTbName1 As String, SFdName1 As String, SFdName2 As String, sRecordValue1 As String, sRecordValue2 As String) As Boolean
     'sTbName1 要查找的表名
     'SFdName1 要查找的字段名1

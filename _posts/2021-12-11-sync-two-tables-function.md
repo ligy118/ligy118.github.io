@@ -46,7 +46,7 @@ OnServer缺省时默认为FALSE，相从date取数需要GetParameter (ParameterN
 
 同步一条记录:
 
-```vb
+```vba
 Function updateOneUMParameter(tempParameterName As String) As Boolean
 On Error GoTo ErrorHandler
     Dim tempValue As String
@@ -69,7 +69,7 @@ End Function
 
 同步多条记录:
 
-```vb
+```vba
 Function updateAllUMParameter() As Boolean
 On Error GoTo ErrorHandler
     Dim ParameterNamen() As String
@@ -106,7 +106,7 @@ call updateAllUMParameter(要同步的记录)
 
 同步多条记录用法：
 
-```vb
+```vba
 ParameterNamen() = Split("aFouceDate,aLastDate,aLastInprocessDate,aLastReserveDate", ",")
 ```
 

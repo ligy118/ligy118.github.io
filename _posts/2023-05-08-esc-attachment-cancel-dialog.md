@@ -17,7 +17,7 @@ tags: [access]
 
 弹窗代码位于**SysFrmAttachments**窗体的**EmptyDump**过程。错误代码为3059，修改此过程，屏蔽掉3059错误的弹窗。
 
-```vb
+```vba
 Public Sub EmptyDump()
     On Error GoTo ErrorHandler
 '

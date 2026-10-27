@@ -49,3 +49,50 @@
     background: linear-gradient(180deg, #155799 0%, #159957 100%);
   }
 </style>
+
+<!-- 代码高亮配色：Monokai 暗色（ligy118 自定义） -->
+<style>
+  :root {
+    --highlight-bg-color: #272822;
+    --highlighter-rouge-color: #f8f8f2;
+    --code-color: #f8f8f2;
+    --code-header-text-color: #e6db74;
+    --code-header-muted-color: #75715e;
+    --code-header-icon-color: #a59f85;
+    --language-border-color: #3e3d32;
+    --inline-code-bg: rgba(39, 40, 34, 0.08);
+  }
+  .highlight, .highlight .w { color: #f8f8f2; background-color: #272822; }
+  .highlight .c, .highlight .ch, .highlight .cd, .highlight .cm, .highlight .cpf, .highlight .c1, .highlight .cs { color: #75715e; font-style: italic; }
+  .highlight .cp { color: #75715e; font-weight: bold; }
+  .highlight .err { color: #960050; background-color: #1e0010; }
+  .highlight .gi { color: #ffffff; background-color: #324932; }
+  .highlight .gd { color: #ffffff; background-color: #493131; }
+  .highlight .gh { color: #999999; }
+  .highlight .go { color: #888888; }
+  .highlight .gp { color: #555555; }
+  .highlight .gu { color: #aaaaaa; }
+  .highlight .k, .highlight .kc, .highlight .kd, .highlight .kp, .highlight .kr, .highlight .kt, .highlight .kv, .highlight .sa, .highlight .no { color: #66d9ef; font-weight: bold; }
+  .highlight .kn, .highlight .ow, .highlight .o, .highlight .nt { color: #f92672; font-weight: bold; }
+  .highlight .mf, .highlight .mh, .highlight .il, .highlight .mi, .highlight .mo, .highlight .m, .highlight .mb, .highlight .mx, .highlight .se { color: #ae81ff; }
+  .highlight .sb, .highlight .sc, .highlight .sd, .highlight .s2, .highlight .sh, .highlight .si, .highlight .sx, .highlight .sr, .highlight .s1, .highlight .ss, .highlight .s, .highlight .dl { color: #e6db74; }
+  .highlight .na, .highlight .nc, .highlight .nd, .highlight .ne, .highlight .nf, .highlight .fm { color: #a6e22e; font-weight: bold; }
+  .highlight .bp, .highlight .nb, .highlight .ni, .highlight .nn, .highlight .vc, .highlight .vg, .highlight .vi, .highlight .nv, .highlight .vm { color: #f8f8f2; }
+  .highlight .nl { color: #f8f8f2; font-weight: bold; }
+  .highlight .ge { font-style: italic; }
+  .highlight .gs { font-weight: bold; }
+  .highlight .gr, .highlight .gt { color: #aa0000; }
+</style>
+
+<!-- highlight.js VBA 精确高亮（ligy118 自定义，本地资源） -->
+<link rel="stylesheet" href="/assets/css/hljs-monokai.min.css">
+<script src="/assets/js/highlight.min.js"></script>
+<script src="/assets/js/highlightjs-vba.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var blocks = document.querySelectorAll('code.language-vba');
+    for (var i = 0; i < blocks.length; i++) {
+      hljs.highlightElement(blocks[i]);
+    }
+  });
+</script>

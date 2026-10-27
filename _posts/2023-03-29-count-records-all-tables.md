@@ -7,7 +7,7 @@ tags: [access]
 
 近期写一个小工具，想用以前写的一个工具作模板。数据库已经很大了，想知道是哪个表的数据多删一删。固有此代码。
 
-```vb
+```vba
 Sub CountRecords()
     Dim db As DAO.Database
     Dim tbl As DAO.TableDef

@@ -31,7 +31,7 @@ tags: [access]
 
 [![点击图片查看大图](/downloads/merge-records-代码.png "点击查看大图")](/downloads/merge-records-代码.png)
 
-```vb
+```vba
 Private Sub Command7_Click()
  Dim rs As New ADODB.Recordset
  Dim rsDes As New ADODB.Recordset

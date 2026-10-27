@@ -1,0 +1,120 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/breakpoints' as bp;
+@use '../abstracts/mixins' as mx;
+@use '../abstracts/placeholders';
+
+.highlighter-rouge {
+  color: var(--highlighter-rouge-color);
+  margin-top: 0.5rem;
+  margin-bottom: 1.2em; /* Override BS Inline-code style */
+}
+
+.highlight {
+  @extend %rounded;
+  @extend %code-snippet-bg;
+
+  overflow: auto;
+  padding-bottom: 0.75rem;
+
+  @at-root figure#{&} {
+    @extend %code-snippet-bg;
+  }
+
+  pre {
+    margin-bottom: 0;
+    font-size: v.$code-font-size;
+    line-height: 1.4rem;
+  }
+
+  table {
+    td {
+      &:first-child {
+        display: inline-block;
+        margin-left: 1rem;
+        margin-right: 0.75rem;
+      }
+
+      &:last-child {
+        padding-right: 2rem !important;
+      }
+
+      pre {
+        overflow: visible; /* Fixed iOS safari overflow-x */
+        word-break: normal; /* Fixed iOS safari linenos code break */
+      }
+    }
+  }
+
+  .lineno {
+    text-align: right;
+    color: var(--highlight-lineno-color);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+} /* .highlight */
+
+code {
+  -webkit-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+  color: var(--code-color);
+
+  &.highlighter-rouge {
+    font-size: v.$code-font-size;
+    padding: 3px 5px;
+    overflow-wrap: break-word;
+    border-radius: v.$radius-sm;
+    background-color: var(--inline-code-bg);
+  }
+
+  &.filepath {
+    background-color: inherit;
+    color: var(--filepath-text-color);
+    font-weight: 600;
+    padding: 0;
+  }
+
+  a > &.highlighter-rouge {
+    padding-bottom: 0; /* show link's underline */
+    color: inherit;
+  }
+
+  a:hover > &.highlighter-rouge {
+    border-bottom: none;
+  }
+
+  blockquote & {
+    color: inherit;
+  }
+}
+
+td.rouge-code {
+  @extend %code-snippet-padding;
+
+  /*
+    Prevent some browser extends from
+    changing the URL string of code block.
+  */
+  a {
+    color: inherit !important;
+    border-bottom: none !important;
+    pointer-events: none;
+  }
+}
+
+div[class^='language-'] {
+  @extend %rounded;
+  @extend %code-snippet-bg;
+
+  box-shadow: var(--language-border-color) 0 0 0 1px;
+
+  .content > & {
+    @include mx.ml-mr(-1rem);
+
+    border-radius: 0;
+
+    @include bp.sm {
+      @include mx.ml-mr(0);
