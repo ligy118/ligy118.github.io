@@ -39,7 +39,7 @@ vba通过读取output.txt日志获取保存结果。
 
 JieTu.bat代码如下:
 
-```vba
+```vb
 @echo off
 setlocal
 set A=%1
@@ -59,7 +59,7 @@ clpy.exe %A% > output.txt 2>&1
 
 3. 为btn粘贴增加以下点击事件(改了原btnadd按钮)
 
-```vba
+```vb
 Private Sub btn粘贴_Click()
     On Error GoTo ErrorHandler
 

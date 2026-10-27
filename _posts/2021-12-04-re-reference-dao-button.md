@@ -21,7 +21,7 @@ tags: [access]
 
 **代   码**:
 
-```vba
+```vb
 Public Function ReAddDAO()
     Dim REFE As References '声明REFE为引用
     Dim strFileName As String '声明strFileName为文本型变量
@@ -38,11 +38,11 @@ Public Function ReAddDAO()
 End Function
 ```
 
-```vba
+```vb
 ![](/downloads/re-reference-dao-button-代码1.png)
 ```
 
-```vba
+```vb
 Private Sub btnRepair_Click()
     Call ReAddDAO
 
@@ -56,11 +56,11 @@ Private Sub btnRepair_Click()
 End Sub
 ```
 
-```vba
+```vb
 ![](/downloads/re-reference-dao-button-代码2.png)
 ```
 
-```vba
+```vb
 @echo off
 timeout /t 2 /nobreak > nul
 set repairpath=%~dp0
