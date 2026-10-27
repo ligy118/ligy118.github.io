@@ -13,8 +13,8 @@ tags: [access]
 
 **图   示**:
 
-[![点击图片查看大图](/downloads/202112181539473375.png "点击查看大图")](/downloads/202112181539473375.png)
+[![点击图片查看大图](/downloads/material-bom-distribution-图示.png "点击查看大图")](/downloads/material-bom-distribution-图示.png)
 
-[![点击图片查看大图](/downloads/202112181540189612.png "点击查看大图")](/downloads/202112181540189612.png)
+[![点击图片查看大图](/downloads/material-bom-distribution-图示2.png "点击查看大图")](/downloads/material-bom-distribution-图示2.png)
 
 来源：http://www.accessoft.com/blog/article-show.asp?userid=81743&Id=20134

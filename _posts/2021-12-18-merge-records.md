@@ -11,17 +11,17 @@ tags: [access]
 
 **图   示**:
 
-![](/downloads/202112181547003950.png)
+![](/downloads/merge-records-图示.png)
 
-[![点击图片查看大图](/downloads/202112181547114314.png "点击查看大图")](/downloads/202112181547114314.png)
+[![点击图片查看大图](/downloads/merge-records-图示2.png "点击查看大图")](/downloads/merge-records-图示2.png)
 
 首先通过查询，对待合并表进行排序
 
-[![点击图片查看大图](/downloads/202112181552263825.png "点击查看大图")](/downloads/202112181552263825.png)
+[![点击图片查看大图](/downloads/merge-records-排序查询.png "点击查看大图")](/downloads/merge-records-排序查询.png)
 
 然后遍历查询，当[物料代码]有变化时在新建的结果表中新增一行，当[物料代码]无变化时编辑相应数据（合并记录）
 
-![](/downloads/202112181555292219.png)
+![](/downloads/merge-records-合并逻辑.png)
 
 **源   码**:
 
@@ -29,7 +29,7 @@ tags: [access]
 
 **代   码**:
 
-[![点击图片查看大图](/downloads/202112181549442592.png "点击查看大图")](/downloads/202112181549442592.png)
+[![点击图片查看大图](/downloads/merge-records-代码.png "点击查看大图")](/downloads/merge-records-代码.png)
 
 ```vba
 Private Sub Command7_Click()

@@ -15,10 +15,10 @@ tags: [access]
 
 **图   示**:
 
-![](/downloads/202112041358599484.png)
+![](/downloads/bom-diff-calc-example-差异图示.png)
 
-[![点击图片查看大图](/downloads/202112040941220958.jpg "点击查看大图")](/downloads/202112040941220958.jpg)
+[![点击图片查看大图](/downloads/bom-diff-calc-example-差异明细1.jpg "点击查看大图")](/downloads/bom-diff-calc-example-差异明细1.jpg)
 
-[![点击图片查看大图](/downloads/202112040941482549.jpg "点击查看大图")](/downloads/202112040941482549.jpg)
+[![点击图片查看大图](/downloads/bom-diff-calc-example-差异明细2.jpg "点击查看大图")](/downloads/bom-diff-calc-example-差异明细2.jpg)
 
 来源：http://www.accessoft.com/blog/article-show.asp?userid=81743&Id=20115

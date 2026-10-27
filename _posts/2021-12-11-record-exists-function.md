@@ -24,7 +24,7 @@ Function RecordExists1(sTbName1 As String, SFdName1 As String, sRecordValue1 As 
 End Function
 ```
 
-![](/downloads/202112111004530747.png)
+![](/downloads/record-exists-function-代码1.png)
 
 两个条件的记录在表中是否存在，用下面自定义函数：
 
@@ -47,7 +47,7 @@ Function RecordExists2(sTbName1 As String, SFdName1 As String, SFdName2 As Strin
 End Function
 ```
 
-![](/downloads/202112111005039123.png)
+![](/downloads/record-exists-function-代码2.png)
 
 **应用示例**:
 
@@ -55,10 +55,10 @@ End Function
 
 **图   示**:
 
-[![点击图片查看大图](/downloads/202112110902166381.png "点击查看大图")](/downloads/202112110902166381.png)
+[![点击图片查看大图](/downloads/record-exists-function-图示.png "点击查看大图")](/downloads/record-exists-function-图示.png)
 
-[![点击图片查看大图](/downloads/202112110902265303.png "点击查看大图")](/downloads/202112110902265303.png)
+[![点击图片查看大图](/downloads/record-exists-function-图示2.png "点击查看大图")](/downloads/record-exists-function-图示2.png)
 
-[![点击图片查看大图](/downloads/202112110902349777.png "点击查看大图")](/downloads/202112110902349777.png)
+[![点击图片查看大图](/downloads/record-exists-function-图示3.png "点击查看大图")](/downloads/record-exists-function-图示3.png)
 
 来源：http://www.accessoft.com/blog/article-show.asp?userid=81743&Id=20126

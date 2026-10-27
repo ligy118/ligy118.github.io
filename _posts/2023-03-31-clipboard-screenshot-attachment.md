@@ -21,7 +21,7 @@ tags: [access]
 
 **图****示**:
 
-[![点击图片查看大图](/downloads/202303311440559198.png "点击查看大图")](/downloads/202303311440559198.png)
+[![点击图片查看大图](/downloads/clipboard-screenshot-attachment-图示.png "点击查看大图")](/downloads/clipboard-screenshot-attachment-图示.png)
 
 **说****明**:
 
@@ -31,7 +31,7 @@ tags: [access]
 
 [GitHub - PiyushSuthar/clpy：直接从命令行将剪贴板📋中的图像保存为图像文件！🔥](https://github.com/PiyushSuthar/clpy)
 
-[![点击图片查看大图](/downloads/202303311443024126.png "点击查看大图")](/downloads/202303311443024126.png)
+[![点击图片查看大图](/downloads/clipboard-screenshot-attachment-clpy.png "点击查看大图")](/downloads/clipboard-screenshot-attachment-clpy.png)
 
 vba调用JieTu.bat ，JieTu.bat运行clpy.exe 进行保存剪切板并将日志写入output.txt。
 
@@ -55,7 +55,7 @@ clpy.exe %A% > output.txt 2>&1
 
 如下图：
 
-[![点击图片查看大图](/downloads/202303311444335494.png "点击查看大图")](/downloads/202303311444335494.png)
+[![点击图片查看大图](/downloads/clipboard-screenshot-attachment-效果图.png "点击查看大图")](/downloads/clipboard-screenshot-attachment-效果图.png)
 
 3. 为btn粘贴增加以下点击事件(改了原btnadd按钮)
 
