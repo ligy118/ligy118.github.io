@@ -1,6 +1,8 @@
 ---
-layout: post
 title: "Example content"
+date: 2017-04-29 00:00:00 +0800
+categories: [计算机]
+tags: [jekyll]
 ---
 
 Text can be **bold**, _italic_, or ~~strikethrough~~.

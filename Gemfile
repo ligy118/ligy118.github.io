@@ -1,24 +1,14 @@
-source "https://rubygems.org"
-ruby RUBY_VERSION
+# frozen_string_literal: true
 
-# Hello! This is where you manage which Jekyll version is used to run.
-# When you want to use a different version, change it below, save the
-# file and run `bundle install`. Run Jekyll with `bundle exec`, like so:
-#
-#     bundle exec jekyll serve
-#
-# This will help ensure the proper Jekyll version is running.
-# Happy Jekylling!
-# gem "jekyll", "3.3.1"   # 已注释:改为使用 github-pages 锁定的 Jekyll 版本(与 GitHub Pages 构建一致)
+source "https://mirrors.tuna.tsinghua.edu.cn/rubygems/"
 
-# 主题模板已内置在仓库(_layouts/_sass),无需额外主题 gem
-# gem "jekyll-theme-cayman-blog", "~> 0.0.5"
+gem "jekyll-theme-chirpy", "~> 7.6"
 
-# If you want to use GitHub Pages, remove the "gem "jekyll"" above and
-# uncomment the line below. To upgrade, run `bundle update github-pages`.
-gem "github-pages", group: :jekyll_plugins
+gem "html-proofer", "~> 5.0", group: :test
 
-# If you have any plugins, put them here!
-group :jekyll_plugins do
-   gem "jekyll-feed", "~> 0.6"
+platforms :windows, :jruby do
+  gem "tzinfo", ">= 1", "< 3"
+  gem "tzinfo-data"
 end
+
+gem "wdm", "~> 0.2.0", :platforms => [:windows]

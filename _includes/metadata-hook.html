@@ -1,0 +1,51 @@
+<!-- Cayman 配色覆盖（ligy118 自定义） -->
+<style>
+  /* ==== 浅色主题 Cayman 化 ==== */
+  :root[data-bs-theme="light"] {
+    --link-color: #1e6bb8;
+    --link-underline-color: #d8e4f0;
+    --toc-highlight: #1e6bb8;
+    --heading-color: #159957;
+    --site-title-color: #ffffff;
+    --site-subtitle-color: #cfdff0;
+    --sidebar-bg: #155799;
+    --sidebar-border-color: #155799;
+    --sidebar-muted-color: #c3d6ea;
+    --sidebar-active-color: #ffffff;
+    --sidebar-hover-bg: rgba(255, 255, 255, 0.16);
+    --sidebar-btn-bg: rgba(255, 255, 255, 0.14);
+    --sidebar-btn-color: #e6f0f8;
+    --avatar-border-color: rgba(255, 255, 255, 0.9);
+    --main-border-color: #e6eef7;
+    --prompt-info-bg: #e8f2fb;
+    --prompt-info-icon-color: #155799;
+  }
+
+  /* 跟随系统的浅色分支 */
+  @media (prefers-color-scheme: light) {
+    :root:not([data-bs-theme]) {
+      --link-color: #1e6bb8;
+      --link-underline-color: #d8e4f0;
+      --toc-highlight: #1e6bb8;
+      --heading-color: #159957;
+      --site-title-color: #ffffff;
+      --site-subtitle-color: #cfdff0;
+      --sidebar-bg: #155799;
+      --sidebar-border-color: #155799;
+      --sidebar-muted-color: #c3d6ea;
+      --sidebar-active-color: #ffffff;
+      --sidebar-hover-bg: rgba(255, 255, 255, 0.16);
+      --sidebar-btn-bg: rgba(255, 255, 255, 0.14);
+      --sidebar-btn-color: #e6f0f8;
+      --avatar-border-color: rgba(255, 255, 255, 0.9);
+      --main-border-color: #e6eef7;
+      --prompt-info-bg: #e8f2fb;
+      --prompt-info-icon-color: #155799;
+    }
+  }
+
+  /* 侧边栏：Cayman 深蓝→绿渐变页头 */
+  #sidebar {
+    background: linear-gradient(180deg, #155799 0%, #159957 100%);
+  }
+</style>
