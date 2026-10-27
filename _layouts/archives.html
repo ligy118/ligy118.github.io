@@ -21,13 +21,13 @@ layout: page
       {% assign last_year = cur_year %}
     {% endif %}
 
-    <li class="d-flex flex-wrap align-items-center">
+    <li>
       {% assign ts = post.date | date: '%s' %}
       <span class="date day" data-ts="{{ ts }}" data-df="DD">{{ post.date | date: '%d' }}</span>
       <span class="date month small text-muted ms-1" data-ts="{{ ts }}" data-df="{{ df_dayjs_m }}">
         {{ post.date | date: df_strftime_m }}
       </span>
-      <span class="title-wrap ms-1">
+      <a href="{{ post.url | relative_url }}">
         {% if post.tags.size > 0 %}
           <span class="tags small text-muted">
             <i class="fa fa-tags fa-fw me-1"></i>
@@ -36,9 +36,10 @@ layout: page
               {%- unless forloop.last -%},{%- endunless -%}
             {% endfor %}
           </span>
+          <span> </span>
         {% endif %}
-        <a href="{{ post.url | relative_url }}" class="ms-1">{{ post.title }}</a>
-      </span>
+        {{ post.title }}
+      </a>
     </li>
 
     {% if forloop.last %}</ul>{% endif %}

@@ -12,9 +12,9 @@ layout: page
     <span class="lead text-muted ps-2">{{ page.posts | size }}</span>
   </h1>
 
-  <ul class="content ps-0">
+  <ul class="content list-unstyled ps-0">
     {% for post in page.posts %}
-      <li class="d-flex flex-wrap justify-content-between px-md-3">
+      <li class="px-md-3 d-md-flex justify-content-between align-items-baseline">
         <span class="title-wrap">
           {% if post.tags.size > 0 %}
             <span class="tags small text-muted me-2">
@@ -27,7 +27,7 @@ layout: page
           {% endif %}
           <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
         </span>
-        <span class="dash flex-grow-1 mx-2"></span>
+        <span class="dash flex-grow-1 mx-2 d-none d-md-block"></span>
         {% include datetime.html date=post.date class='text-muted small text-nowrap' lang=lang %}
       </li>
     {% endfor %}
