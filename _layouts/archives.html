@@ -27,11 +27,8 @@ layout: page
       <span class="date month small text-muted ms-1" data-ts="{{ ts }}" data-df="{{ df_dayjs_m }}">
         {{ post.date | date: df_strftime_m }}
       </span>
-      <a href="{{ post.url | relative_url }}" class="ms-1">{{ post.title }}</a>
-
-      <!-- tags (纯文本，无链接) -->
       {% if post.tags.size > 0 %}
-        <span class="w-100 tags small text-muted mt-1">
+        <span class="tags small text-muted ms-1">
           <i class="fa fa-tags fa-fw me-1"></i>
           {% for tag in post.tags %}
             {{ tag }}
@@ -39,6 +36,7 @@ layout: page
           {% endfor %}
         </span>
       {% endif %}
+      <a href="{{ post.url | relative_url }}" class="ms-1">{{ post.title }}</a>
     </li>
 
     {% if forloop.last %}</ul>{% endif %}
