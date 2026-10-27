@@ -3,6 +3,8 @@ title: "貂蝉技能范围测试"
 date: 2018-06-03 00:00:00 +0800
 categories: [游戏]
 tags: [王者荣耀]
+redirect_from:
+  - /diaochan-jineng-fanwei-ceshi.html
 ---
 
 > 视频攻略（B 站投稿视频，时长 05:01，播放约 661）

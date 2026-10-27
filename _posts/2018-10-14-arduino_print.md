@@ -3,6 +3,8 @@ title: "arduino记不住打出来一目了然的知识点"
 date: 2018-10-14 00:00:00 +0800
 categories: [计算机]
 tags: [arduino]
+redirect_from:
+  - /arduino_print.html
 ---
 
 1. 引脚

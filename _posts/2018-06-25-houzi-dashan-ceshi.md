@@ -3,6 +3,8 @@ title: "王者荣耀猴子（孙悟空）大闪测试"
 date: 2018-06-25 00:00:00 +0800
 categories: [游戏]
 tags: [王者荣耀]
+redirect_from:
+  - /houzi-dashan-ceshi.html
 ---
 
 > 视频攻略（B 站投稿视频，时长 01:09，播放约 656）

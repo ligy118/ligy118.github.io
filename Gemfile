@@ -4,6 +4,8 @@ source "https://mirrors.tuna.tsinghua.edu.cn/rubygems/"
 
 gem "jekyll-theme-chirpy", "~> 7.6"
 
+gem "jekyll-redirect-from", "~> 0.6"
+
 gem "html-proofer", "~> 5.0", group: :test
 
 platforms :windows, :jruby do

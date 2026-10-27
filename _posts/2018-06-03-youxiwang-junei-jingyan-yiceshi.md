@@ -3,6 +3,8 @@ title: "有关王者荣耀局内经验的一些测试"
 date: 2018-06-03 00:00:00 +0800
 categories: [游戏]
 tags: [王者荣耀]
+redirect_from:
+  - /youxiwang-junei-jingyan-yiceshi.html
 ---
 
 配合原始数据食用更佳。

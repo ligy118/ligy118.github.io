@@ -3,6 +3,8 @@ title: "直伤神石混乱最强烙印"
 date: 2020-10-12 00:00:00 +0800
 categories: [游戏]
 tags: [咔叽探险队]
+redirect_from:
+  - /kaki-chaos-lore-affix.html
 ---
 
 烙印增加主词缀：武器攻击力%。

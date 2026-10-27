@@ -3,6 +3,8 @@ title: "绝对路径与相对路径"
 date: 2018-10-17 00:00:00 +0800
 categories: [计算机]
 tags: [c, 路径]
+redirect_from:
+  - /Absolute_and_relative_paths.html
 ---
 
 ##### 通俗来说

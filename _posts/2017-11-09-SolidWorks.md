@@ -3,6 +3,8 @@ title: "SolidWorks安装"
 date: 2017-11-09 00:00:00 +0800
 categories: [计算机]
 tags: [solidworks]
+redirect_from:
+  - /SolidWorks.html
 ---
 
 [安装包下载（微云分享）](https://share.weiyun.com/5ivuRyF)

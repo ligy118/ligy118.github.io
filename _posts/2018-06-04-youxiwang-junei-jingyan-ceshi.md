@@ -3,6 +3,8 @@ title: "有关王者荣耀局内经验的测试"
 date: 2018-06-04 00:00:00 +0800
 categories: [游戏]
 tags: [王者荣耀]
+redirect_from:
+  - /youxiwang-junei-jingyan-ceshi.html
 ---
 
 > 视频攻略（B 站投稿视频，时长 01:29:44，播放约 673）
