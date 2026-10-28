@@ -3,7 +3,7 @@ title: 繁体 Windows 环境下 VBA 编写：VBE 编码问题与解决方案
 date: 2026-10-28 10:15:00 +0800
 categories: [计算机]
 tags: [VBA, 编码, Big5, CP950, VBE, VS Code, 繁体]
-image: /downloads/2026-10-28-vba-big5-vbe-encoding-剪贴板编码形态图.png
+image: /downloads/2026-10-28-vba-big5-vbe-encoding-剪贴板双格式结构图.png
 ---
 ## 结论先行
 
@@ -20,7 +20,7 @@ image: /downloads/2026-10-28-vba-big5-vbe-encoding-剪贴板编码形态图.png
 
 这是大家困惑最多的地方：**复制的时候，屏幕上明明显示的是正常的繁体，粘贴进 VBE 却变成了乱码**；反过来，**从 VBE 里复制出来的繁体，粘贴到别处也乱码**。要理解这个现象，必须看剪贴板内部到底存了什么。
 
-![剪贴板内部结构]( /downloads/2026-10-28-vba-big5-vbe-encoding-剪贴板编码形态图.png)
+![剪贴板内部结构]( /downloads/2026-10-28-vba-big5-vbe-encoding-剪贴板双格式结构图.png)
 
 **剪贴板里同时存放两份格式副本：**
 
