@@ -50,6 +50,19 @@ image: /downloads/2026-10-28-vba-big5-vbe-encoding-剪贴板编码形态图.png
 
 **还有一个叠加因素**：如果 VBE 代码窗口里本身已经是 `?`（当初粘贴时就已经乱码），那 Unicode 层里存的**就是 `?` 本身**——再怎么复制、贴到哪里都是 `?`，因为字符在进 VBE 的那一刻就已经丢失了。
 
+**从 VBE 往外拿代码的正确做法（导出 .bas）：**
+
+在 VBE 的模块窗口里右键（或菜单「文件 → 导出文件」）→ 保存为 `.bas`。导出的 `.bas` 是**按系统代码页（繁体 = CP950）编码的字节文件**。
+
+实测可行：**用记事本打开导出的 `.bas` → 显示正常 → 复制出来 → 内容正常**。这里记事本读的是「文件字节」——`.bas` 的字节就是 CP950，记事本按系统 ANSI 代码页解码，读取路径正确，所以能正常复制出来。
+
+注意区分「记事本的两个场景」：
+
+- 记事本**打开 `.bas` 读取/复制** → **可以**（实测 ✓）：字节是 CP950，记事本按 ANSI 解码，读出来就是对的；
+- 记事本**当中转站**（新建 txt 粘贴再复制进 VBE）→ **不行**（实测 ✗）：粘贴/复制路径会做编码形态转换，中转不可靠。
+
+所以结论是：**记事本可以「读」，不能「中转」**。要粘贴进 VBE，还是走 WordPad / Word / VS Code / Notepad++ / Notepad3 中转。
+
 **安全结论：**
 
 - **现代编辑器之间复制粘贴**（双方都读 Unicode 层）→ 永远正常。
@@ -162,17 +175,21 @@ VBE 本身没有编码选项，行为如下（图为示意——在自己电脑�
 
 ## VS Code 的 VBA 插件
 
-在 VS Code 里写 VBA（特别是配合上面的 CP950 编码方案）时，两个常用插件：
+推荐 **XVBA - Live Server VBA**（`local-smart.excel-live-server`，23 万+ 安装）。
 
-1. **Visual Studio Code VBA**（`aferri.avb`，5 万+ 安装）
-   提供 VBA 语法高亮和常用代码片段，写 `.bas` 文件时关键字、注释、字符串一目了然。下载地址：
-   `https://marketplace.visualstudio.com/items?itemName=aferri.avb`
+XVBA 把 Excel / Access 的 VBA 工程直接接到 VS Code：
 
-2. **Excel VBA Extension**（`taizod1024.excel-vba`）
-   面向 Excel VBA 工程开发，支持 VBA 文件编辑、工作表增删改、工作表导出为 PNG、CustomUI XML 编辑等，配合 Excel 使用。下载地址：
-   `https://marketplace.visualstudio.com/items?itemName=taizod1024.excel-vba`
+- **Import VBA**：一键把 Excel/Access 里的全部模块拉成 `.bas` / `.cls` / `.frm` 文件到工作区——**可以直接点击读取/编辑这些 `.bas` 文件**；
+- **Live Server**：在 VS Code 里保存 `.bas`，只推送改动的那一个文件，Excel 里立即生效；
+- **Export Changed VBA**：随时手动把改过的文件推回 Excel，无需重载整个工程；
+- 附带 **IntelliSense 自动补全、代码片段、宏运行、Ribbon 设计**等能力。
 
-工作流建议：**在 VS Code 里用 CP950 编码编写/编辑 .bas 文件 → 复制 → 粘贴进 VBE**，既避开 VBE 的编辑体验问题，又不踩编码坑。
+安装：VS Code 里 `Ctrl+P` → `ext install local-smart.excel-live-server`
+下载地址：`https://marketplace.visualstudio.com/items?itemName=local-smart.excel-live-server`
+
+配合本文的编码方案：在 VS Code 打开 `.bas` 时，通过「通过编码重新打开」选 **Traditional Chinese (Big5 / CP950)**，编辑、保存、复制都按 CP950 语义走，再配合 XVBA 直接读 `.bas` / 推回 Excel。
+
+工作流建议：**用 XVBA 在 VS Code 里直接读写 .bas（按 CP950 编码）→ 需要粘贴时复制 → 粘贴进 VBE**，既避开 VBE 的编辑体验问题，又不踩编码坑。
 
 ## 附：繁体环境 VBA 代码规范（厂区实践总结）
 
@@ -182,7 +199,7 @@ VBE 本身没有编码选项，行为如下（图为示意——在自己电脑�
 2. **`WorksheetFunction` 固定用英文函数名**（如 `Application.WorksheetFunction.VLookup`）。写本地化中文名（如「垂直尋找」「總和」）会直接报错。
 3. **业务逻辑禁止比对 `MonthName` / `WeekdayName` 返回的文字**。繁体环境下它们返回繁体中文，应只用 `Month()` / `Weekday()` 的数字判断。
 4. **外部日期字符串不用 `CDate` 直接解析**（跟随系统短日期格式，易错）。用 `Split` + `DateSerial(y, m, d)` 构造日期序列号。
-5. **跨环境分发模块，不要依赖 VBE 原生导出 `.bas`**。VBE 导出 `.bas` 用系统 ANSI 代码页（繁体 = CP950），繁体导出给简体 VBE 导入会乱码；改用文件/文本等载体传递代码。
+5. **跨环境分发模块，不要依赖 VBE 原生导出 `.bas`**。VBE 导出 `.bas` 用系统 ANSI 代码页（繁体 = CP950），繁体导出给简体 VBE 导入会乱码；改用文件/文本等载体传递代码。（注：导出 `.bas` 后**自己用记事本打开再复制**是可以的，见剪贴板章节；本条针对的是把 `.bas` 直接交给**另一个 VBE 导入**的跨环境场景。）
 6. **跨环境交付带工程密码的 VBA 工程（xlsm）存在加载/密码校验风险**；旧格式 `.xls` 的二进制工程兼容性更差。交付前建议移除工程密码。
 7. **`StrConv` 可做繁简转换**（`StrConv(文字, vbSimplifiedChinese)` / `StrConv(文字, vbTraditionalChinese)`），但只转换字符串内容，**救不了源码里已经乱码的硬编码**。
 8. **VBE 语法关键字永远是英文**（`If` / `For` / `Dim` / `Function` 等），不受 Office 界面语言影响，不存在中文关键字版本。
